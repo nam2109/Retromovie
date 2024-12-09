@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Showtimes Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/admin_showtime.css" />
+    <!-- Link to the external CSS file -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../public/img/logo.png" alt="Logo" class="logo-img" />
+          <h2>Hello, Admin</h2>
+        </div>
+        <hr />
+        <ul class="menu">
+          <li>
+            <a href="/frontend/html/admin_user.html" class="menu-item">
+              <i class="fa-regular fa-user"></i>Customer
+            </a>
+          </li>
+          <li>
+            <a href="/frontend/html/admin_movie.html" class="menu-item">
+              <i class="fa-solid fa-film"></i>Movie
+            </a>
+          </li>
+          <li>
+            <a
+              href="/frontend/html/admin_showtime.html"
+              class="menu-item active"
+            >
+              <i class="fa-regular fa-calendar"></i>Showtimes
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="logout">Log out</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="showtimes-header">
+          <h1>Showtimes</h1>
+          <button class="add-showtime-btn">Thêm Lịch Chiếu</button>
+        </div>
+
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search for a showtime by movie name"
+          />
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên Phim</th>
+              <th>Rạp Chiếu</th>
+              <th>Ngày Chiếu</th>
+              <th>Giờ Chiếu</th>
+              <th>Giá Vé</th>
+              <th>Hành Động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Những Tế Bào Của Yumi</td>
+              <td>Rạp 1</td>
+              <td>2024-10-21</td>
+              <td>14:00</td>
+              <td>100,000 VNĐ</td>
+              <td>
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Lật Mặt 7: Một Điều Ước</td>
+              <td>Rạp 2</td>
+              <td>2024-10-21</td>
+              <td>16:00</td>
+              <td>120,000 VNĐ</td>
+              <td>
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Avatar: The Way of Water</td>
+              <td>Rạp 3</td>
+              <td>2024-10-22</td>
+              <td>18:00</td>
+              <td>150,000 VNĐ</td>
+              <td>
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Modal Thêm Lịch Chiếu -->
+    <!-- Add Showtime Modal -->
+    <div id="addShowtimeModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Add New Showtime</h2>
+        <form id="addShowtimeForm">
+          <label for="showtime-id">Showtime ID:</label>
+          <input type="text" id="showtime-id" name="showtime-id" required />
+
+          <label for="movie-name">Tên Phim:</label>
+          <input type="text" id="movie-name" name="movie-name" required />
+
+          <label for="cinema">Rạp Chiếu:</label>
+          <select id="cinema" name="cinema" required>
+            <option value="">Select Cinema</option>
+            <option value="Rạp 1">Rạp 1</option>
+            <option value="Rạp 2">Rạp 2</option>
+            <option value="Rạp 3">Rạp 3</option>
+            <!-- Add more cinema options as needed -->
+          </select>
+
+          <label for="show-date">Ngày Chiếu:</label>
+          <input type="date" id="show-date" name="show-date" required />
+
+          <label for="show-time">Giờ Chiếu:</label>
+          <input type="time" id="show-time" name="show-time" required />
+
+          <label for="ticket-price">Giá Vé:</label>
+          <input type="text" id="ticket-price" name="ticket-price" required />
+
+          <button type="submit" class="submit-btn">Add Showtime</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Get all menu items
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    // Loop through menu items and add click event
+    menuItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        // Remove 'active' class from all menu items
+        menuItems.forEach((el) => el.classList.remove("active"));
+
+        // Add 'active' class to the clicked menu item
+        this.classList.add("active");
+      });
+    });
+
+    // Search bar functionality
+    const searchInput = document.querySelector(".search-bar input");
+
+    searchInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        // Prevent the default behavior (form submission or any other)
+        event.preventDefault();
+
+        // Call the search function or logic here
+        const searchTerm = searchInput.value.trim();
+
+        // Example: Logging the search term (you can implement your own search logic)
+        console.log("Searching for:", searchTerm);
+
+        // Implement search logic
+        searchShowtimes(searchTerm);
+      }
+    });
+
+    // Example search function (this is where you implement your search logic)
+    function searchUsers(searchTerm) {
+      const tableRows = document.querySelectorAll("tbody tr");
+      tableRows.forEach((row) => {
+        const cells = row.querySelectorAll("td");
+        const name = cells[2].textContent.toLowerCase();
+
+        // Check if search term matches the name or email
+        if (name.includes(searchTerm.toLowerCase())) {
+          row.style.display = ""; // Show the row
+        } else {
+          row.style.display = "none"; // Hide the row if no match
+        }
+      });
+    }
+
+    // Get modal and "Add Showtime" button
+    const modal = document.getElementById("addShowtimeModal"); // Update the modal ID
+    const addShowtimeBtn = document.querySelector(".add-showtime-btn"); // Update the button class if necessary
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Open modal when "Add Showtime" button is clicked
+    addShowtimeBtn.addEventListener("click", () => {
+      modal.classList.add("show"); // Show modal
+    });
+
+    // Close modal when "X" button is clicked
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show"); // Hide modal
+    });
+
+    // Close modal when clicking outside the modal
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.classList.remove("show"); // Hide modal
+      }
+    });
+  </script>
+</html>

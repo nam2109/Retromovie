@@ -1,0 +1,342 @@
+<html>
+  <head>
+    <title>Kumanthong: Chiêu Hồn Vong Nhi</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/movieDetail.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="/"
+          ><img src="../public/img/image.png" alt="Retro Cinema Logo"
+        /></a>
+        <div class="menu">
+          <div class="menu-item">
+            <a href="#"
+              ><img src="../public/img/btn-ticket.42d72c96.webp" alt="Mua Vé"
+            /></a>
+          </div>
+          <div class="menu-item">
+            <a href="/">Phim</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Góc Điện Ảnh</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Sự Kiện</a>
+          </div>
+        </div>
+
+        <div class="user-info">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/6fn68Zz7hJ0rV6hXXU9UWeAP3pc8Z6PzpVhfsd7hP31UdzSnA.jpg"
+            alt="User Avatar"
+            width="40"
+            height="40"
+          />
+          <div class="user-details">
+            <div class="name">Lý An Khang</div>
+            <div class="stars">0 Stars</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <div class="header">
+      <a href="">
+        <img
+          alt="Header Image"
+          id="trailerPoster"
+          height="200"
+          src="../public/img/trailer-backgrond-black.jpg"
+          width="700
+        "
+        />
+        <i class="fas fa-play-circle play-button" onclick="showTrailer()"></i>
+      </a>
+    </div>
+    <div class="container">
+      <div class="content">
+        <div class="poster">
+          <img
+            id="moviePoster"
+            alt="Movie Poster"
+            height="450"
+            src="../public/img/trailer-backgrond-black.jpg"
+            width="300"
+          />
+        </div>
+        <div class="details">
+          <h1>
+            <span
+              style="
+                background-color: #f39c12;
+                color: #fff;
+                margin: 0 20px;
+                padding: 2px 5px;
+                border-radius: 3px;
+              "
+              >T18</span
+            >
+          </h1>
+          <div class="info">
+            <span><i class="fas fa-clock"></i> Phút</span>
+            <span><i class="fas fa-calendar-alt"></i> ../../....</span>
+          </div>
+          <div class="rating"><i class="fas fa-star"></i> 7.0 (61 votes)</div>
+          <div class="info">
+            <span class="thongtin">Quốc Gia:</span>
+            <p class="country"></p>
+            <!-- Thay đổi lớp từ p thành p class="country" -->
+          </div>
+          <div class="info">
+            <span class="thongtin">Thể Loại:</span>
+            <p class="genres"></p>
+            <!-- Thay đổi lớp từ p thành p class="genres" -->
+          </div>
+          <div class="info">
+            <span class="thongtin">Đạo diễn:</span>
+            <p class="director tags"></p>
+            <!-- Thay đổi lớp từ p thành p class="director" -->
+          </div>
+          <div class="info">
+            <span class="thongtin">Diễn viên:</span>
+            <p class="actors"></p>
+            <!-- Thay đổi lớp từ p thành p class="actors" -->
+          </div>
+        </div>
+      </div>
+
+      <div class="description">
+        <h2>Nội Dung Phim</h2>
+        <p></p>
+      </div>
+
+      <div class="container-2">
+        <div class="display-content">
+          <h1>Lịch Chiếu</h1>
+        </div>
+        <div class="theater" id="gv">
+          <h2>Retro Gò Vấp</h2>
+          <div class="showtimes"></div>
+        </div>
+        <div class="theater" id="bt">
+          <h2>Retro Bình Thạnh</h2>
+          <div class="showtimes"></div>
+        </div>
+      </div>
+    </div>
+    <div class="trailer-modal" id="trailerModal" onclick="hideTrailer()">
+      <iframe
+        id="trailerVideo"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <footer>
+      <div class="main-content">
+        <div class="footer-home">
+          <div class="footer-wrap">
+            <div class="footer-col">
+              <h4 class="footer-title">GIỚI THIỆU</h4>
+              <ul>
+                <li><a href="">Về Chúng Tôi</a></li>
+                <li><a href="">Thoả Thuận Sử Dụng</a></li>
+                <li><a href="">Quy Chế Hoạt Động</a></li>
+                <li><a href="">Chính Sách Bảo Mật</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-title">GÓC ĐIỆN ẢNH</h4>
+              <ul>
+                <li><a href="">Thể Loại Phim</a></li>
+                <li><a href="">Bình Luận Phim</a></li>
+                <li><a href="">Blog Điện Ảnh</a></li>
+                <li><a href="">Phim Hay Tháng</a></li>
+                <li><a href="">Phim IMAX</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-title">HỖ TRỢ</h4>
+              <ul>
+                <li><a href="">Góp Ý</a></li>
+                <li><a href="">Sale & Services</a></li>
+                <li><a href="">Rạp / Giá Vé</a></li>
+                <li><a href="">Tuyển Dụng</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <img src="../public/img/image.png" alt="Retro Cinema" />
+              <div class="social-links">
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get("id");
+        const posterImg = document.getElementById("moviePoster"); // Đảm bảo ID là "moviePoster"
+
+        try {
+          const response = await fetch(
+            `http://127.0.0.1:3001/api/movies/nam/${movieId}`
+          );
+          if (response.ok) {
+            const movie = await response.json();
+
+            // Cập nhật tiêu đề của trang
+            document.querySelector("title").innerText = movie.title;
+            document.querySelector(".details h1").innerHTML = `${
+              movie.title
+            } <span style="background-color: #f39c12; color: #fff; margin: 0 20px; padding: 2px 5px; border-radius: 3px;">${
+              movie.rating || "T18"
+            }</span>`;
+            document.querySelector(
+              ".details .info span i"
+            ).nextSibling.textContent = `${movie.duration} phút`;
+            document.querySelector(
+              ".details .info span i.fa-calendar-alt"
+            ).nextSibling.textContent = new Date(
+              movie.releaseDate
+            ).toLocaleDateString();
+
+            // Cập nhật thông tin Quốc Gia
+            document.querySelector(".country").innerText = movie.country;
+
+            // Cập nhật thông tin Thể Loại
+            const genreContainer = document.querySelector(".genres");
+            movie.genres.forEach((genre) => {
+              const span = document.createElement("span");
+              span.innerText = genre;
+              span.classList.add("tags");
+              genreContainer.appendChild(span);
+            });
+
+            // Cập nhật thông tin Đạo diễn
+            document.querySelector(".director").innerText = movie.director;
+
+            // Cập nhật thông tin Diễn viên
+            const actorContainer = document.querySelector(".actors");
+            movie.actors.forEach((actor) => {
+              const p = document.createElement("p");
+              p.innerText = actor;
+              actorContainer.appendChild(p);
+            });
+
+            // Cập nhật mô tả phim
+            document.querySelector(".description p").innerText =
+              movie.description;
+
+            // Cập nhật ảnh poster
+            posterImg.src = movie.poster; // Đảm bảo movie.poster có chứa đường dẫn đúng
+
+            // Cập nhật ảnh trailer
+            const trailerImg = document.getElementById("trailerPoster");
+            trailerImg.src = movie.posterTrailer; // Giả định `movie.posterTrailer` chứa đường dẫn ảnh đúng
+          } else {
+            console.error("Movie not found");
+          }
+        } catch (error) {
+          console.error("Error fetching movie details:", error);
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        // Lấy movieId từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get("id");
+
+        if (!movieId) {
+          console.error("Movie ID not provided in URL");
+          return;
+        }
+
+        try {
+          // Fetch lịch chiếu theo movieId
+          const response = await fetch(
+            `http://127.0.0.1:3001/api/shows/${movieId}`
+          );
+          if (response.ok) {
+            const shows = await response.json();
+
+            // Phân loại lịch chiếu theo rạp
+            const groupedShows = shows.reduce((acc, show) => {
+              const cinemaHallId = show.cinemaHallId.startsWith("hall_gv")
+                ? "gv"
+                : "bt";
+              acc[cinemaHallId] = acc[cinemaHallId] || [];
+              acc[cinemaHallId].push(show);
+              return acc;
+            }, {});
+
+            // Hiển thị lịch chiếu của Retro Gò Vấp
+            const goVapContainer = document.querySelector("#gv .showtimes");
+            if (groupedShows.gv && groupedShows.gv.length > 0) {
+              groupedShows.gv.forEach((show) => {
+                const button = document.createElement("button");
+                button.innerText = show.startTime;
+
+                // Thêm sự kiện click để chuyển hướng
+                button.addEventListener("click", () => {
+                  const url = `http://127.0.0.1:3001/seat.html?movieId=${movieId}&showId=${show.id}`;
+                  window.location.href = url; // Chuyển hướng đến trang đặt ghế
+                });
+
+                goVapContainer.appendChild(button);
+              });
+            } else {
+              document.querySelector("#gv").style.display = "none"; // Ẩn rạp nếu không có lịch chiếu
+            }
+
+            // Hiển thị lịch chiếu của Retro Bình Thạnh
+            const binhThanhContainer = document.querySelector("#bt .showtimes");
+            if (groupedShows.bt && groupedShows.bt.length > 0) {
+              groupedShows.bt.forEach((show) => {
+                const button = document.createElement("button");
+                button.innerText = show.startTime;
+
+                // Thêm sự kiện click để chuyển hướng
+                button.addEventListener("click", () => {
+                  const url = `http://127.0.0.1:3001/seat.html?movieId=${movieId}&showId=${show.id}`;
+                  window.location.href = url; // Chuyển hướng đến trang đặt ghế
+                });
+
+                binhThanhContainer.appendChild(button);
+              });
+            } else {
+              document.querySelector("#bt").style.display = "none"; // Ẩn rạp nếu không có lịch chiếu
+            }
+          } else {
+            console.error("Failed to fetch show data");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      });
+    </script>
+  </body>
+</html>

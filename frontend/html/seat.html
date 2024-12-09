@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Seat Selection</title>
+    <link rel="stylesheet" href="../css/seat.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="/"
+          ><img src="../public/img/image.png" alt="Retro Cinema Logo"
+        /></a>
+        <div class="menu">
+          <div class="menu-item">
+            <a href="#"
+              ><img src="../public/img/btn-ticket.42d72c96.webp" alt="Mua Vé"
+            /></a>
+          </div>
+          <div class="menu-item">
+            <a href="/">Phim</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Góc Điện Ảnh</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Sự Kiện</a>
+          </div>
+        </div>
+
+        <div class="user-info">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/6fn68Zz7hJ0rV6hXXU9UWeAP3pc8Z6PzpVhfsd7hP31UdzSnA.jpg"
+            alt="User Avatar"
+            width="40"
+            height="40"
+          />
+          <div class="user-details">
+            <div class="name">Lý An Khang</div>
+            <div class="stars">0 Stars</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="seat-selection">
+        <div class="seating-chart">
+          <div class="row-labels">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+            <div>G</div>
+            <div>H</div>
+            <div>I</div>
+            <div>J</div>
+          </div>
+          <div class="progress">
+            <h2>MÀN HÌNH</h2>
+            <div class="manHinh"></div>
+            <div class="seats">
+              <!-- Add seat buttons here -->
+              <!-- Example row of seats -->
+            </div>
+          </div>
+        </div>
+        <div class="legend flex">
+          <div class="sold flex">
+            <div class="vuong daban"></div>
+            <p class="ml-2">Ghế đã bán</p>
+          </div>
+          <div class="selected flex ml-2">
+            <div class="vuong dangchon"></div>
+            <p class="ml-2">Ghế đang chọn</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-details">
+        <img
+          id="moviePoster"
+          alt="Movie Poster"
+          height="450"
+          src="../public/img/trailer-backgrond-black.jpg"
+          width="300"
+        />
+        <h3>Movie Title</h3>
+        <p>2D Phụ Đề</p>
+        <p class="cinema-hall"></p>
+        <p class="show-info"></p>
+        <hr />
+        <p class="total">Tổng cộng: 0 đ</p>
+
+        <a href="#" id="continueButton">
+          <button class="continue-btn">Tiếp tục</button>
+        </a>
+        <button class="back-btn">Quay lại</button>
+      </div>
+    </div>
+    <div id="confirmationForm" class="confirmation-form hidden">
+      <h2>Xác Nhận Đặt Vé</h2>
+      <p id="selectedSeatsSummary"></p>
+      <button id="confirmButton">Xác Nhận</button>
+      <button id="cancelButton">Hủy</button>
+    </div>
+  </body>
+  <script>
+    const selectedSeats = new Set(); // Lưu danh sách ghế đang chọn
+    document.getElementById("continueButton").addEventListener("click", (e) => {
+      e.preventDefault();
+      const selectedSeatsArray = Array.from(selectedSeats);
+      if (selectedSeatsArray.length === 0) {
+        alert("Vui lòng chọn ít nhất một ghế!");
+        return;
+      }
+
+      // Hiển thị form xác nhận và thông tin ghế đã chọn
+      document.getElementById("confirmationForm").classList.remove("hidden");
+      document.getElementById(
+        "selectedSeatsSummary"
+      ).textContent = `Ghế bạn đã chọn: ${selectedSeatsArray.join(", ")}`;
+    });
+    document.getElementById("cancelButton").addEventListener("click", () => {
+      document.getElementById("confirmationForm").classList.add("hidden");
+    });
+
+    document
+      .getElementById("confirmButton")
+      .addEventListener("click", async () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const showId = urlParams.get("showId");
+        const selectedSeatsArray = Array.from(selectedSeats).map((seat) => {
+          const [row, col] = [seat[0], seat.slice(1)];
+          return { row, col, showId };
+        });
+
+        try {
+          const response = await fetch(
+            "http://127.0.0.1:3001/api/showseats/book",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                seats: Array.from(selectedSeats).map((seat) => {
+                  const row = seat[0]; // Lấy hàng từ ký tự đầu tiên
+                  const col = parseInt(seat.slice(1), 10); // Lấy cột từ các ký tự còn lại
+                  return {
+                    seatId: `${row}${col}`, // Ví dụ: "A5"
+                    row,
+                    col,
+                    showId: parseInt(showId), // Cần đảm bảo `showId` là số nguyên
+                  };
+                }),
+              }),
+            }
+          );
+
+          if (response.ok) {
+            alert("Đặt vé thành công!");
+            window.location.reload(); // Tải lại trang sau khi đặt ghế thành công
+          } else {
+            const errorData = await response.json();
+            alert(`Đặt vé thất bại: ${errorData.message}`);
+          }
+        } catch (error) {
+          console.error("Lỗi khi gửi yêu cầu đặt vé:", error);
+          alert("Đã xảy ra lỗi khi đặt vé!");
+        }
+      });
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const movieId = urlParams.get("movieId");
+      const showId = urlParams.get("showId");
+      const posterImg = document.getElementById("moviePoster");
+
+      if (!movieId || !showId) {
+        console.error("Missing movieId or showId in URL");
+        return;
+      }
+
+      try {
+        // Fetch movie and specific show data directly
+        const [movieResponse, showResponse] = await Promise.all([
+          fetch(`http://127.0.0.1:3001/api/movies/nam/${movieId}`),
+          fetch(`http://127.0.0.1:3001/api/shows/showId/${showId}`),
+        ]);
+
+        if (movieResponse.ok && showResponse.ok) {
+          const movie = await movieResponse.json();
+          const show = await showResponse.json();
+
+          // Update movie details
+          posterImg.src = movie.poster;
+          document.querySelector(".movie-details h3").textContent = movie.title;
+
+          const cinemaMapping = {
+            hall_gv_1: "Retro Gò Vấp - RAP 1",
+            hall_gv_2: "Retro Gò Vấp - RAP 2",
+            hall_gv_3: "Retro Gò Vấp - RAP 3",
+            hall_bt_1: "Retro Bình Thạnh - RAP 1",
+            hall_bt_2: "Retro Bình Thạnh - RAP 2",
+          };
+
+          const cinemaHallId = show.cinemaHallId.trim();
+          const cinemaName = cinemaMapping[cinemaHallId] || "Unknown Cinema";
+
+          document.querySelector(".movie-details .cinema-hall").textContent =
+            cinemaName;
+          document.querySelector(
+            ".movie-details .show-info"
+          ).textContent = `${show.startTime} - ${show.endTime}`;
+        } else {
+          console.error("Failed to fetch movie or show data");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const showId = urlParams.get("showId");
+      let ticketPrice = 0; // Giá vé (sẽ được cập nhật từ API show)
+
+      try {
+        // Gọi API lấy danh sách ghế từ MongoDB
+        const responseSeats = await fetch(`/api/seats`); // API lấy danh sách tất cả ghế
+        if (!responseSeats.ok) throw new Error("Không thể lấy dữ liệu ghế");
+
+        const seats = await responseSeats.json();
+
+        // Gọi API lấy danh sách ghế đã đặt (showSeats) theo showId
+        const responseShowSeats = await fetch(`/api/showseats/${showId}`);
+        if (!responseShowSeats.ok)
+          throw new Error("Không thể lấy dữ liệu ghế đã đặt");
+
+        const showSeats = await responseShowSeats.json();
+
+        // Tạo một Set chứa các ghế đã đặt để dễ dàng kiểm tra
+        const soldSeats = new Set(
+          showSeats.map((seat) => `${seat.row}${seat.col}`)
+        );
+
+        // Lấy phần tử nơi ghế sẽ được hiển thị
+        const seatingChart = document.querySelector(".seats");
+        seatingChart.innerHTML = ""; // Xóa nội dung ghế cũ
+
+        // Duyệt qua tất cả ghế và tạo các button ghế trên giao diện
+        seats.forEach((seat) => {
+          const seatButton = document.createElement("button");
+          seatButton.classList.add("seat");
+          seatButton.innerText = `${seat.row}${seat.col}`;
+          seatButton.dataset.row = seat.row; // Lưu trữ row để tiện xử lý
+          seatButton.dataset.col = seat.col; // Lưu trữ col để tiện xử lý
+
+          // Kiểm tra xem ghế đã được đặt hay chưa
+          if (soldSeats.has(`${seat.row}${seat.col}`)) {
+            seatButton.classList.add("sold"); // Đánh dấu ghế đã đặt
+            seatButton.disabled = true; // Không cho phép chọn ghế đã đặt
+          }
+
+          // Xử lý sự kiện khi chọn ghế
+          seatButton.addEventListener("click", () => {
+            if (seatButton.classList.contains("selected")) {
+              seatButton.classList.remove("selected");
+              selectedSeats.delete(`${seat.row}${seat.col}`);
+            } else {
+              seatButton.classList.add("selected");
+              selectedSeats.add(`${seat.row}${seat.col}`);
+            }
+            updateTotal();
+          });
+
+          seatingChart.appendChild(seatButton);
+        });
+        // Hàm cập nhật tổng tiền
+        function updateTotal() {
+          const total = selectedSeats.size * ticketPrice;
+          document.querySelector(
+            ".total"
+          ).textContent = `Tổng cộng: ${total.toLocaleString()} đ`;
+        }
+      } catch (error) {
+        console.error("Lỗi khi lấy dữ liệu ghế:", error);
+      }
+
+      // Lấy thông tin show để cập nhật giá vé
+      fetch(`/api/shows/showId/${showId}`)
+        .then((response) => response.json())
+        .then((show) => {
+          ticketPrice = show.price;
+        })
+        .catch((error) => console.error("Error fetching show:", error));
+
+      // Hàm cập nhật tổng tiền
+      function updateTotal() {
+        const total = selectedSeats.size * ticketPrice;
+        document.querySelector(
+          ".total"
+        ).textContent = `Tổng cộng: ${total.toLocaleString} đ`;
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "title": "Thiên Đường Quả Báo",
+    "description": "Thongkam (Jeff Satur) và Sek (Pongsakorn) làm lụng vất vả, cày ngày cày đêm để xây dựng một mái ấm. Sau bao nỗ lực, cuối cùng họ cũng có quyền sở hữu trang trại sầu riêng ở Mae Hong Son. Tuy nhiên, bi kịch bỗng ập tới khi Sek đột ngột qua đời trong một vụ tai nạn vào thời điểm họ chưa kịp đăng ký kết hôn. Chính điều này đã khiến Thongkam không có quyền sở hữu tài sản mà 2 người đã cùng gây dựng. Ngôi nhà và đất đai bao gồm vườn sầu riêng đương nhiên thuộc về mẹ của Sek, người sẽ chuyển đến sống cùng con gái nuôi Mo (Engfa) và người làm vườn Jingna. Thongkam giờ phải đấu tranh để giành lại thành quả của tình yêu và công sức lao động của mình. Liệu giữa Thongkam và Mo, ai sẽ giành được quyền thừa kế , trở thành chủ vựa sầu riêng?",
+    "director": "Nguyễn Hữu Tiến",
+    "duration": 120,
+    "releaseDate": "2024-10-24",
+    "poster": "../public/img/thien-duong-qua-bao.jpg",
+    "posterTrailer": "../public/img/Trailer-thien-duong-qua-bao.jpg",
+    "trailer": "https://www.youtube.com/watch?v=2-oT85FKYsQ&t=3s",
+    "genres": ["Hài", "Tâm lý"],
+    "actors": ["Trấn Thành", "Hari Won", "Minh Hằng"],
+    "country": "Việt Nam"
+  },
+  {
+    "id": 2,
+    "title": "Cô Dâu Hào Môn",
+    "description": "Uyển Ân chính thức lên xe hoa trong thế giới thượng lưu của đạo diễn Vũ Ngọc Đãng qua bộ phim Cô Dâu Hào Môn. Thừa thắng xông lên sau doanh thu trăm tỷ từ Chị Chị Em Em 2, nhà sản xuất Will Vũ và đạo diễn Vũ Ngọc Đãng bắt tay thực hiện dự án Cô Dâu Hào Môn. Bộ phim xoay quanh câu chuyện làm dâu nhà hào môn dưới góc nhìn hài hước và châm biếm, hé lộ những câu chuyện kén dâu chọn rể trong giới thượng lưu. Phối hợp cùng Uyển Ân ở các phân đoạn tình cảm trong bộ phim lần này là diễn viên Samuel An. Anh được đạo diễn Vũ Ngọc Đãng “đo ni đóng giày” cho vai cậu thiếu gia Bảo Hoàng với ngoại hình điển trai, phong cách lịch lãm và gia thế khủng. Cùng góp mặt với Uyển Ân trong bộ phim đình đám lần này là sự xuất hiện của những cái tên bảo chứng phòng vé như: Thu Trang, Kiều Minh Tuấn, Samuel An, Lê Giang, NSND Hồng Vân...",
+    "director": "Nguyễn Quang Dũng",
+    "duration": 110,
+    "releaseDate": "2024-10-24",
+    "poster": "../public/img/co-dau-hao-mon.jpg",
+    "posterTrailer": "../public/img/Trailer-co-dau-hao-mon.jpg",
+    "trailer": "https://www.youtube.com/watch?v=cwumN4-rLWY&t=6s",
+    "genres": ["Hài", "Tình cảm"],
+    "actors": ["Quang Đại", "Khả Ngân", "Hà Tăng"],
+    "country": "Việt Nam"
+  },
+  {
+    "id": 3,
+    "title": "Tee Yod: Qủy Ăn Tạng Phần 2",
+    "description": "Ba năm sau cái chết của Yam, Yak vẫn tiếp tục săn lùng linh hồn bí ẩn mặc áo choàng đen. Gặp một cô gái có triệu chứng giống Yam, Yak phát hiện ra người bảo vệ linh hồn, pháp sư ẩn dật Puang, sống trong một khu rừng đầy nguy hiểm. Giữa những phép thuật ma quỷ và những sinh vật nguy hiểm. Khi họ đuổi theo linh hồn mặc áo choàng đen, tiếng kêu đầy ám ảnh của Tee Yod sắp quay trở lại một lần nữa...",
+    "director": "Lê Văn Kiệt",
+    "duration": 95,
+    "releaseDate": "2024-10-25",
+    "poster": "../public/img/tee-yod-quy-an-tang-phan-2.jpg",
+    "posterTrailer": "../public/img/Trailer-tee-yod-quy-an-tang-phan-2.jpg",
+
+    "trailer": "https://www.youtube.com/watch?v=kZZkCDc38yI",
+    "genres": ["Kinh dị"],
+    "actors": ["Ngọc Trinh", "Lâm Vỹ Dạ", "Nhã Phương"],
+    "country": "Việt Nam"
+  },
+  {
+    "id": 4,
+    "title": "Ngày Xưa Có Một Chuyện Tình",
+    "description": "Sau thành công của Mắt Biếc, tác phẩm do nhà văn Nguyễn Nhật Ánh chấp bút tiếp tục chuyển thể lên màn ảnh rộng – đó là Ngày Xưa Có Một Chuyện Tình. Vẫn là câu chuyện về tuổi trẻ và tình yêu học trò, phim kể về bộ ba Vinh – Miền – Phúc, trải dài trong bốn giai đoạn từ 1987 – 2000. Từng ghi dấu ấn với khán giả qua Thưa Mẹ Con Đi nhẹ nhàng, sâu lắng; Trịnh Đình Lê Minh được tin tưởng giao cho dự án lớn và nhận sự quan tâm của công chúng – chuyển thể truyện Nguyễn Nhật Ánh. Ngay từ những thước phim đầu tiên, Ngày Xưa Có Một Chuyện Tình đã gây ấn tượng mạnh nhờ cảnh phim đẹp như tranh, giới thiệu thiên nhiên vùng đất Phú Yên tươi đẹp. Ekip sáng tạo mỹ thuật cũng cố gắng hết sức phục dựng khung cảnh xưa cũ giai đoạn 1992 – 1997. Dàn nhân vật chính chia làm hai giai đoạn 12 và 17 tuổi. Năm 1987 - 12 tuổi là Thanh Tú (Vinh), Bảo Tiên (Miền) và Hạo Khang (Phúc). Năm 1992 - 17 tuổi là Avin Lu (Vinh), Ngọc Xuân (Miền) và Nhật Hoàng (Phúc). Câu mở đầu trailer – lời dẫn chuyện của nhân vật Vinh là câu thoại nổi bật trong truyện: “Tình bạn là mảnh đất phù hợp nhất để tình yêu gieo xuống hạt giống của mình. Đến một lúc, ta sẽ nhận được phần thưởng quý giá nhất, đó chính là tình yêu”. Phim hứa hẹn bám sát nội dung truyện gốc, đúng với nhiệt huyết tuổi trẻ qua từng câu chữ mà nhà văn Nguyễn Nhật Ánh muốn thể hiện.",
+    "director": "Đặng Nhật Minh",
+    "duration": 100,
+    "releaseDate": "2024-10-25",
+    "poster": "../public/img/ngay-xua-co-mot-chuyen-tinh.jpg",
+    "posterTrailer": "../public/img/Trailer-ngay-xua-co-mot-chuyen-tinh.jpg",
+
+    "trailer": "https://www.youtube.com/watch?v=68xnG7hkEOE&t=1s",
+    "genres": ["Hài"],
+    "actors": ["Lê Giang", "Trường Giang", "Vân Trang"],
+    "country": "Việt Nam"
+  },
+  {
+    "id": 5,
+    "title": "Venom: Kèo Cuối",
+    "description": "Sau chuyến du lịch ngắn sang quê nhà của Spider-Man: No Way Home (2021), Eddie Brock (Tom Hardy) giờ đây cùng Venom “hành hiệp trượng nghĩa” và “nhai đầu” hết đám tội phạm trong thành phố. Tuy nhiên, đi đêm lắm cũng có ngày gặp ma, chính phủ Mỹ đã phát hiện ra sự tồn tại của con quái vật ngoài hành tinh này. Anh chàng buộc phải trở thành kẻ đào tẩu, liên tục trốn chạy khỏi những cuộc truy quét liên tục. Thế nhưng, đây chưa phải là rắc rối lớn nhất… Những con quái vật gớm ghiếc bất ngờ xuất hiện tại nhiều nơi. Hành tinh của chủng tộc Symbiote đã phát hiện ra Trái Đất và chuẩn bị cho cuộc xâm lăng tổng lực.",
+    "director": "Andy Serkis",
+    "duration": 150,
+    "releaseDate": "2024-10-25",
+    "poster": "../public/img/venom-keo-cuoi.jpg",
+    "posterTrailer": "../public/img/Trailer-venom-keo-cuoi.jpg",
+
+    "trailer": "https://www.youtube.com/watch?v=P0C9ccMXtqc",
+    "genres": ["Hành động", "Khoa học viễn tưởng"],
+    "actors": ["Tom Hardy", "Woody Harrelson", "Michelle Williams"],
+    "country": "Mỹ"
+  },
+  {
+    "id": 6,
+    "title": "Elli Và Bí Ẩn Chiếc Tàu Ma",
+    "description": "Một cuộc truy đuổi của những chiếc drone bí ẩn đã bị bắt đi người chú thân thiết của hồn ma Elli bé bỏng. Quyết định rời khỏi căn biệt thự gia đình, Elli đã lên đường đến cảng Grimstor nơi chiếc tàu ma đang ẩn náu. Tại đây, cô gặp gỡ một nhóm bạn mới và cùng nhau tham gia vào cuộc chiến cứu người. Nhưng khi bí ẩn của chiếc tàu ma dần sáng tỏ, mọi người đều phải đối diện với thử thách lớn hơn, và điều đó đã làm lung lay những tình bạn vốn tưởng như vững bền.",
+    "director": "Phan Ngọc Luân",
+    "duration": 85,
+    "releaseDate": "2024-10-25",
+    "poster": "../public/img/elli-va-bi-an-chiec-tau-ma.jpg",
+    "posterTrailer": "../public/img/Trailer-elli-va-bi-an-chiec-tau-ma.jpg",
+    "trailer": "https://www.youtube.com/watch?v=9tDZpBbg8Ow&t=1s",
+    "genres": ["Hành động", "Phiêu lưu"],
+    "actors": ["Duy Khánh", "Thúy Ngân", "Hà Trinh"],
+    "country": "Việt Nam"
+  },
+  {
+    "id": 7,
+    "title": "Vùng Đất Bị Nguyền Rủa",
+    "description": "Sau cái chết của vợ, để trốn tránh quá khứ, Mit và cô con gái May chuyển đến một ngôi nhà mới ở khu phố ngoại ô. Trong lúc chuẩn bị xây dựng một miếu thờ thiên trước nhà mới, anh vô tình giải thoát một con quỷ đang giận dữ và ác mộng kinh hoàng ập tới cuộc sống mới của hai bố con. Mit tìm kiếm sự giúp đỡ của một thầy phù thủy để làm lễ trừ tà. Nhưng họ không biết rằng, lễ trừ tà cuối cùng sẽ mở ra nhiều bí mật đen tối về vùng đất này.",
+    "director": "Bảo Nhân",
+    "duration": 120,
+    "releaseDate": "2024-10-25",
+    "poster": "../public/img/vung-dat-bi-nguyen-rua.jpg",
+    "posterTrailer": "../public/img/Trailer-vung-dat-bi-nguyen-rua.jpg",
+
+    "trailer": "https://www.youtube.com/watch?v=TTHThG-pj6s",
+    "genres": ["Kinh dị", "Giật gân"],
+    "actors": ["Kiều Minh Tuấn", "An Nguy", "Quỳnh Anh Shyn"],
+    "country": "Việt Nam"
+  },
+  {
+    "id": 8,
+    "title": "Tiếng Gọi Của Oán Hồn",
+    "description": "Năm 1992, một cô gái rơi từ mái của trường trung học cơ sở. Bên cạnh thi thể của cô ấy là một máy ghi âm cassette vẫn đang ghi lại... 32 năm sau, Honoka được thuê dạy các lớp học hè tại ngôi trường đó. Một ngày nọ, cô nghe thấy tiếng ngâm nga từ trên mái và một giọng nói hét lên: “Hãy lắng nghe âm thanh của tôi!” sau đó là tiếng rơi thịch của một học sinh. Honoka cùng các học sinh của mình, Hitomi và Takeru, bắt đầu nghi ngờ rằng hai vụ tai nạn này có liên quan đến nhau. Họ tìm trong kỷ yếu của năm 1992 và phát hiện bức ảnh của Sana, một bạn cùng lớp đam mê thu thập “âm thanh của mọi người” để viết bài hát của mình. Honoka, Hitomi, và Takeru nhanh chóng nhận ra rằng Sana chính là nguyên nhân của những vụ tai nạn, và bất cứ ai nghe bài hát của cô ấy đều có thể trở thành nạn nhân tiếp theo.",
+    "director": "Takashi Shimizu",
+    "duration": 108,
+    "releaseDate": "2024-10-27",
+    "poster": "../public/img/tieng-goi-cua-oan-hon.jpg",
+    "posterTrailer": "../public/img/Trailer-tieng-goi-cua-oan-hon.jpg",
+
+    "trailer": "https://www.youtube.com/watch?v=BVNlcPgFvmg",
+    "genres": ["Kinh dị"],
+    "actors": ["Nagisa Shibuya", "Ikoi Hayase", "Soma Santoki"],
+    "country": "Nhật Bản"
+  },
+  {
+    "id": 9,
+    "title": "Robot Hoang Dã",
+    "description": "Cuộc phiêu lưu hoành tráng theo chân hành trình của một robot — đơn vị ROZZUM 7134, gọi tắt là Roz. Roz vô tình dạt vào hoang đảo sau một sự cố và nơi đây trở thành địa điểm sống mới của cô. Tại đây, Roz kết thân và nhận nuôi một chú ngỗng con, đặt tên là Brightbill. Roz và Brightbill dần dần thân thiết với các bạn thú trên đảo, song sau đó phải chống chọi, bảo vệ “nhà mới” trước sự xâm lăng của nhà máy từng sản xuất ra Roz.",
+    "director": "Hiroshi Miyamoto",
+    "duration": 130,
+    "releaseDate": "2024-10-30",
+    "poster": "../public/img/robot-hoang-da.jpg",
+    "posterTrailer": "../public/img/Trailer-robot-hoang-da.jpg",
+    "trailer": "https://www.youtube.com/watch?v=example10",
+    "genres": ["Hài", "Hành động"],
+    "actors": ["Masahiro Higashide", "Eri Fukatsu", "Takeru Satoh"],
+    "country": "Nhật Bản"
+  },
+  {
+    "id": 10,
+    "title": "Vây Hãm Tại Đài Bắc",
+    "description": "Theo chân John Lawlor là một đặc vụ DEA cừ khôi bất khả chiến bại, anh sẽ không tiếc hi sinh bất cứ điều gì để hoàn thành nhiệm vụ được giao. Trong khi đó, Joey Kwang là 'người vận chuyển' hàng đầu ở Đài Bắc với tốc độ không ai sánh bằng và tư duy nhạy bén mà không ai có thể theo kịp cô. Vô tình số phận đã đưa họ đến với nhau trước khi thế lực tội phạm chia cắt họ. 15 năm sau, số phận một lần nữa đẩy Joey và John va chạm nhau trong tình cảnh bất đắc dĩ vào cuối tuần tại Đài Bắc. Và cả hai sẽ khám phá ra rằng điều duy nhất khó hơn việc yêu… chính là yêu lại.",
+    "director": "George Huang",
+    "duration": 100,
+    "releaseDate": "2024-10-30",
+    "poster": "../public/img/vay-ham-tai-dai-bac.jpg",
+    "posterTrailer": "../public/img/Trailer-vay-ham-tai-dai-bac.jpg",
+    "trailer": "https://www.youtube.com/watch?v=j6VeCxrGY8U",
+    "genres": ["Giật gân", "Hành động"],
+    "actors": ["Luke Evans", "Sung Kang", "Quế Luân Mĩ"],
+    "country": "Đài Loan"
+  }
+]

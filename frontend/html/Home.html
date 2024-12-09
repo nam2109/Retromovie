@@ -1,0 +1,280 @@
+<html>
+  <head>
+    <title>Galaxy Cinema</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/Home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="../html/Home.html"
+          ><img src="../public/img/image.png" alt="Retro Cinema Logo"
+        /></a>
+        <div class="menu">
+          <div class="menu-item">
+            <a href="#"
+              ><img src="../public/img/btn-ticket.42d72c96.webp" alt="Mua Vé"
+            /></a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Phim</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Góc Điện Ảnh</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Sự Kiện</a>
+          </div>
+        </div>
+
+        <div class="user-info">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/6fn68Zz7hJ0rV6hXXU9UWeAP3pc8Z6PzpVhfsd7hP31UdzSnA.jpg"
+            alt="User Avatar"
+            width="40"
+            height="40"
+          />
+          <div class="user-details">
+            <div class="name">Lý An Khang</div>
+            <div class="stars">0 Stars</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Body part -->
+    <main>
+      <!-- Display films 2-->
+
+      <section class="movies-section">
+        <h2 class="name">Phim Đang Chiếu</h2>
+        <div class="movies-grid" id="movies-grid"></div>
+      </section>
+
+      <div class="review-films-container">
+        <h2 class="review-films-title">GÓC ĐIỆN ẢNH</h2>
+        <ul class="review-films-tabs">
+          <li class="review-films-tab active"><a href="">Bình luận phim</a></li>
+          <li class="review-films-tab"><a href="">Blog điện ảnh</a></li>
+        </ul>
+        <div class="control-content">
+          <div class="review-films-left">
+            <div class="review-films-featured">
+              <a href="#" class="movie-cards"
+                ><img
+                  src="../public/img/ReviewVenom.jpg"
+                  alt="Venom The Last Dance"
+                  class="review-films-image-l"
+              /></a>
+              <h3 class="review-films-featured-title">
+                [Preview] Venom The Last Dance: Sony Có Lấy Lại Lòng Tin Sau
+                Morbius & Madame Web?
+              </h3>
+              <div class="review-films-buttons">
+                <button class="review-films-like-button">
+                  <i class="fas fa-thumbs-up review-films-icon"></i>Thích
+                </button>
+                <span class="review-films-likes">45</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-films-right">
+            <div class="review-films-review-item mb-4">
+              <div class="review-film-review-content">
+                <a href="#" class="movie-cards"
+                  ><img
+                    src="../public/img/ReviewJoker.jpg"
+                    alt="Joker"
+                    class="review-films-image-r"
+                /></a>
+                <h4 class="review-films-review-title">
+                  [Review] Joker Folie À Deux: Gã Hề Hay Hoàng Tử Tội Phạm?
+                </h4>
+              </div>
+              <div class="review-films-buttons">
+                <button class="review-films-like-button">
+                  <i class="fas fa-thumbs-up review-films-icon"></i>Thích
+                </button>
+                <span class="review-films-likes">113</span>
+              </div>
+            </div>
+
+            <div class="review-films-review-item mb-4">
+              <div class="review-film-review-content">
+                <a href="#" class="movie-cards"
+                  ><img
+                    src="../public/img/ReviewRobot.jpg"
+                    alt="Robot Hoang Dã"
+                    class="review-films-image-r"
+                /></a>
+                <h4 class="review-films-review-title">
+                  [Review] Robot Hoang Dã: Tình Cảm Ấp Ám Xuất Phát Từ Máy Móc
+                </h4>
+              </div>
+              <div class="review-films-buttons">
+                <button class="review-films-like-button">
+                  <i class="fas fa-thumbs-up review-films-icon"></i>Thích
+                </button>
+                <span class="review-films-likes">58</span>
+              </div>
+            </div>
+
+            <div class="review-films-review-item mb-4">
+              <div class="review-film-review-content">
+                <a href="#" class="movie-cards"
+                  ><img
+                    src="../public/img/ReviewTrans.jpg"
+                    alt="Transformers One"
+                    class="review-films-image-r"
+                /></a>
+                <h4 class="review-films-review-title">
+                  [Review] Transformers One: Xuất Sắc Ngoài Mong Đợi
+                </h4>
+              </div>
+              <div class="review-films-buttons">
+                <button class="review-films-like-button">
+                  <i class="fas fa-thumbs-up review-films-icon"></i>Thích
+                </button>
+                <span class="review-films-likes">304</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="aboutUs">
+        <h2 class="title">TRANG CHỦ</h2>
+        <div class="describe">
+          <p>
+            <span class="hight-light">Retro Cinema</span> là một trong những
+            công ty tư nhân đầu tiên về điện ảnh được thành lập từ năm 2003, đã
+            khẳng định thương hiệu là 1 trong 10 địa điểm vui chơi giải trí được
+            yêu thích nhất. Ngoài hệ thống rạp chiếu phim hiện đại, thu hút hàng
+            triệu lượt người đến xem,
+            <span class="hight-light">Retro Cinema</span> còn hấp dẫn khán giả
+            bởi không khí thân thiện cũng như chất lượng dịch vụ hàng đầu.
+            <br />
+            <br />
+            Đến website retrocine.vn, khách hàng sẽ dễ dàng tham khảo các phim
+            hay nhất, phim mới nhất đang chiếu hoặc sắp chiếu luôn được cập nhật
+            thường xuyên. Lịch chiếu tại tất cả hệ thống rạp chiếu phim của
+            <span class="hight-light">Retro Cinema</span> cũng được cập nhật đầy
+            đủ hàng ngày hàng giờ trên trang chủ.
+            <br />
+            <br />
+            Giờ đây đặt vé tại
+            <span class="hight-light">Retro Cinema</span> càng thêm dễ dàng chỉ
+            với vài thao tác vô cùng đơn giản. Để mua vé, hãy vào tab Mua vé.
+            Quý khách có thể chọn Mua vé theo phim, theo rạp, hoặc theo ngày.
+            Sau đó, tiến hành mua vé theo các bước hướng dẫn. Chỉ trong vài
+            phút, quý khách sẽ nhận được tin nhắn và email phản hồi Đặt vé thành
+            công của <span class="hight-light">Retro Cinema</span>. Quý khách có
+            thể dùng tin nhắn lấy vé tại quầy vé của
+            <span class="hight-light">Retro Cinema</span> hoặc quét mã QR để một
+            bước vào rạp mà không cần tốn thêm bất kỳ công đoạn nào nữa.
+            <br />
+            <br />
+            Nếu bạn đã chọn được phim hay để xem, hãy đặt vé cực nhanh bằng box
+            Mua Vé Nhanh ngay từ Trang Chủ. Chỉ cần một phút, tin nhắn và email
+            phản hồi của <span class="hight-light">Retro Cinema</span> sẽ gửi
+            ngay vào điện thoại và hộp mail của bạn.
+            <br />
+            <br />
+            Nếu chưa quyết định sẽ xem phim mới nào, hãy tham khảo các bộ phim
+            hay trong mục Phim Đang Chiếu cũng như Phim Sắp Chiếu tại rạp chiếu
+            phim bằng cách vào mục Bình Luận Phim trên trang chủ của
+            <span class="hight-light">Retro Cinema</span>.
+            <br />
+            <br />
+            <span class="hight-light">Retro Cinema</span> chúc các bạn có những
+            giây phút thoải mái vui vẻ!
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="main-content">
+        <div class="footer-home">
+          <div class="footer-wrap">
+            <div class="footer-col">
+              <h4 class="footer-title">GIỚI THIỆU</h4>
+              <ul>
+                <li><a href="">Về Chúng Tôi</a></li>
+                <li><a href="">Thoả Thuận Sử Dụng</a></li>
+                <li><a href="">Quy Chế Hoạt Động</a></li>
+                <li><a href="">Chính Sách Bảo Mật</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-title">GÓC ĐIỆN ẢNH</h4>
+              <ul>
+                <li><a href="">Thể Loại Phim</a></li>
+                <li><a href="">Bình Luận Phim</a></li>
+                <li><a href="">Blog Điện Ảnh</a></li>
+                <li><a href="">Phim Hay Tháng</a></li>
+                <li><a href="">Phim IMAX</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-title">HỖ TRỢ</h4>
+              <ul>
+                <li><a href="">Góp Ý</a></li>
+                <li><a href="">Sale & Services</a></li>
+                <li><a href="">Rạp / Giá Vé</a></li>
+                <li><a href="">Tuyển Dụng</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <img src="/public/img/image.png" alt="Galaxy Cinema" />
+              <div class="social-links">
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const response = await fetch("/api/movies/nam");
+          const movies = await response.json();
+          const moviesGrid = document.getElementById("movies-grid");
+
+          // Tạo và thêm các thẻ cho từng phim
+          movies.forEach((movie) => {
+            const movieCard = document.createElement("div");
+            movieCard.classList.add("movie-card");
+
+            movieCard.innerHTML = `
+              <a href="/movie/details.html?id=${movie.id}">
+                <img src="${movie.poster}" alt="${movie.title}" class="movie-poster" />
+                <h3>${movie.title}</h3>
+              </a>
+            `;
+
+            moviesGrid.appendChild(movieCard);
+          });
+        } catch (error) {
+          console.error("Error fetching movies:", error);
+        }
+      });
+    </script>
+  </body>
+</html>

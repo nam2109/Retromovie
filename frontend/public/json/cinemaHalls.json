@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hall_gv_1",
+    "number": 1,
+    "totalSeat": 100,
+    "cinemaId": "retro_govap"
+  },
+  {
+    "id": "hall_gv_2",
+    "number": 2,
+    "totalSeat": 100,
+    "cinemaId": "retro_govap"
+  },
+  {
+    "id": "hall_gv_3",
+    "number": 3,
+    "totalSeat": 100,
+    "cinemaId": "retro_govap"
+  },
+  {
+    "id": "hall_bt_1",
+    "number": 1,
+    "totalSeat": 100,
+    "cinemaId": "retro_binhthanh"
+  },
+  {
+    "id": "hall_bt_2",
+    "number": 2,
+    "totalSeat": 100,
+    "cinemaId": "retro_binhthanh"
+  }
+]

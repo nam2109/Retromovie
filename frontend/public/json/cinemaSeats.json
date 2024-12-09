@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "seat_a1",
+    "row": "a",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a2",
+    "row": "a",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a3",
+    "row": "a",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a4",
+    "row": "a",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a5",
+    "row": "a",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a6",
+    "row": "a",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a7",
+    "row": "a",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a8",
+    "row": "a",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a9",
+    "row": "a",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a10",
+    "row": "a",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a11",
+    "row": "a",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_a12",
+    "row": "a",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b1",
+    "row": "b",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b2",
+    "row": "b",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b3",
+    "row": "b",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b4",
+    "row": "b",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b5",
+    "row": "b",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b6",
+    "row": "b",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b7",
+    "row": "b",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b8",
+    "row": "b",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b9",
+    "row": "b",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b10",
+    "row": "b",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b11",
+    "row": "b",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_b12",
+    "row": "b",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c1",
+    "row": "c",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c2",
+    "row": "c",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c3",
+    "row": "c",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c4",
+    "row": "c",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c5",
+    "row": "c",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c6",
+    "row": "c",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c7",
+    "row": "c",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c8",
+    "row": "c",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c9",
+    "row": "c",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c10",
+    "row": "c",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c11",
+    "row": "c",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_c12",
+    "row": "c",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d1",
+    "row": "d",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d2",
+    "row": "d",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d3",
+    "row": "d",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d4",
+    "row": "d",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d5",
+    "row": "d",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d6",
+    "row": "d",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d7",
+    "row": "d",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d8",
+    "row": "d",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d9",
+    "row": "d",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d10",
+    "row": "d",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d11",
+    "row": "d",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_d12",
+    "row": "d",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e1",
+    "row": "e",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e2",
+    "row": "e",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e3",
+    "row": "e",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e4",
+    "row": "e",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e5",
+    "row": "e",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e6",
+    "row": "e",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e7",
+    "row": "e",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e8",
+    "row": "e",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e9",
+    "row": "e",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e10",
+    "row": "e",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e11",
+    "row": "e",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_e12",
+    "row": "e",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f1",
+    "row": "f",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f2",
+    "row": "f",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f3",
+    "row": "f",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f4",
+    "row": "f",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f5",
+    "row": "f",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f6",
+    "row": "f",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f7",
+    "row": "f",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f8",
+    "row": "f",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f9",
+    "row": "f",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f10",
+    "row": "f",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f11",
+    "row": "f",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_f12",
+    "row": "f",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g1",
+    "row": "g",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g2",
+    "row": "g",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g3",
+    "row": "g",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g4",
+    "row": "g",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g5",
+    "row": "g",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g6",
+    "row": "g",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g7",
+    "row": "g",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g8",
+    "row": "g",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g9",
+    "row": "g",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g10",
+    "row": "g",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g11",
+    "row": "g",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_g12",
+    "row": "g",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h1",
+    "row": "h",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h2",
+    "row": "h",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h3",
+    "row": "h",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h4",
+    "row": "h",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h5",
+    "row": "h",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h6",
+    "row": "h",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h7",
+    "row": "h",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h8",
+    "row": "h",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h9",
+    "row": "h",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h10",
+    "row": "h",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h11",
+    "row": "h",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_h12",
+    "row": "h",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i1",
+    "row": "i",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i2",
+    "row": "i",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i3",
+    "row": "i",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i4",
+    "row": "i",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i5",
+    "row": "i",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i6",
+    "row": "i",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i7",
+    "row": "i",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i8",
+    "row": "i",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i9",
+    "row": "i",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i10",
+    "row": "i",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i11",
+    "row": "i",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_i12",
+    "row": "i",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j1",
+    "row": "j",
+    "col": 1,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j2",
+    "row": "j",
+    "col": 2,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j3",
+    "row": "j",
+    "col": 3,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j4",
+    "row": "j",
+    "col": 4,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j5",
+    "row": "j",
+    "col": 5,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j6",
+    "row": "j",
+    "col": 6,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j7",
+    "row": "j",
+    "col": 7,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j8",
+    "row": "j",
+    "col": 8,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j9",
+    "row": "j",
+    "col": 9,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j10",
+    "row": "j",
+    "col": 10,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j11",
+    "row": "j",
+    "col": 11,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  },
+  {
+    "id": "seat_j12",
+    "row": "j",
+    "col": 12,
+    "cinemaHall": [
+      "hall_gv_1",
+      "hall_gv_2",
+      "hall_gv_3",
+      "hall_bt_1",
+      "hall_bt_2"
+    ]
+  }
+]

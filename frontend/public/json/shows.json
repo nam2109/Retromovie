@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "movieId": 1,
+    "cinemaHallId": "hall_gv_1",
+    "startTime": "09:00",
+    "endTime": "11:18",
+    "createOn": "15-05-2024",
+    "price": 50000
+  },
+  {
+    "id": 2,
+    "movieId": 3,
+    "cinemaHallId": "hall_bt_3",
+    "startTime": "13:00",
+    "endTime": "15:18",
+    "createOn": "15-05-2024",
+    "price": 50000
+  },
+  {
+    "id": 3,
+    "movieId": 3,
+    "cinemaHallId": "hall_gv_3",
+    "startTime": "20:00",
+    "endTime": "22:18",
+    "createOn": "15-05-2024",
+    "price": 50000
+  },
+  {
+    "id": 4,
+    "movieId": 3,
+    "cinemaHallId": "hall_bt_2",
+    "startTime": "20:00",
+    "endTime": "22:18",
+    "createOn": "15-05-2024",
+    "price": 50000
+  },
+  {
+    "id": 5,
+    "movieId": 3,
+    "cinemaHallId": "hall_bt_2",
+    "startTime": "22:00",
+    "endTime": "22:18",
+    "createOn": "15-05-2024",
+    "price": 50000
+  },
+  {
+    "id": 6,
+    "movieId": 6,
+    "cinemaHallId": "hall_gv_1",
+    "startTime": "10:00",
+    "endTime": "12:15",
+    "createOn": "16-05-2024",
+    "price": 60000
+  },
+  {
+    "id": 7,
+    "movieId": 4,
+    "cinemaHallId": "hall_gv_3",
+    "startTime": "14:00",
+    "endTime": "16:30",
+    "createOn": "16-05-2024",
+    "price": 70000
+  },
+  {
+    "id": 8,
+    "movieId": 2,
+    "cinemaHallId": "hall_bt_1",
+    "startTime": "17:00",
+    "endTime": "19:10",
+    "createOn": "16-05-2024",
+    "price": 50000
+  },
+  {
+    "id": 9,
+    "movieId": 5,
+    "cinemaHallId": "hall_bt_3",
+    "startTime": "18:00",
+    "endTime": "20:10",
+    "createOn": "17-05-2024",
+    "price": 75000
+  },
+  {
+    "id": 10,
+    "movieId": 4,
+    "cinemaHallId": "hall_gv_2",
+    "startTime": "20:00",
+    "endTime": "22:15",
+    "createOn": "17-05-2024",
+    "price": 80000
+  }
+]

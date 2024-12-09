@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  height: 100px;
+}
+
+.navbar img {
+  height: 50px;
+}
+.navbar .menu {
+  display: flex;
+  align-items: center;
+}
+.navbar .menu .menu-item {
+  margin: 0 15px;
+  position: relative;
+}
+.navbar .menu .menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+.navbar .menu .menu-item .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.navbar .menu .menu-item:hover .dropdown {
+  display: block;
+}
+.navbar .menu .menu-item .dropdown a {
+  display: block;
+  padding: 10px;
+  color: #333;
+}
+.navbar .menu .menu-item .dropdown a:hover {
+  background-color: #f1f1f1;
+}
+.navbar .menu .buy-ticket {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.navbar .menu .buy-ticket i {
+  margin-right: 5px;
+}
+.navbar .search {
+  display: flex;
+  align-items: center;
+}
+.navbar .search i {
+  font-size: 20px;
+  color: #333;
+}
+.navbar .user-info {
+  display: flex;
+  align-items: center;
+}
+.navbar .user-info img {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 10px;
+}
+.navbar .user-info .user-details {
+  display: flex;
+  flex-direction: column;
+}
+.navbar .user-info .user-details .name {
+  font-size: 14px;
+  color: #333;
+}
+.navbar .user-info .user-details .stars {
+  font-size: 12px;
+  color: #999;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.combo-section {
+  width: 65%;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.combo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.combo-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.combo-item img {
+  width: 150px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.combo-details {
+  flex-grow: 1;
+}
+
+.combo-details h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.combo-details p {
+  color: #666;
+}
+
+.price {
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-selector button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.quantity-selector .quantity {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.movie-details {
+  width: 30%; /* Giảm chiều rộng khu vực chi tiết phim */
+  background-color: white;
+  padding: 15px; /* Giảm padding cho gọn gàng */
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.poster {
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.continue-btn,
+.back-btn {
+  width: 100%;
+  padding: 8px; /* Giảm padding của nút */
+  margin: 8px 0;
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  font-size: 14px; /* Giảm font chữ của nút */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: #ccc;
+}
+
+.continue-btn:hover,
+.back-btn:hover {
+  opacity: 0.8;
+}

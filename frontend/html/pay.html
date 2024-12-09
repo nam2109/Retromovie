@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="../css/pay.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="/Project-UI/client/Page/Home.html"><img src="/Project-UI/client/public/image.png" alt="Retro Cinema Logo"></a>
+            <div class="menu">
+                <div class="menu-item">
+                    <a href="#"><img src="/Project-UI//client//public/btn-ticket.42d72c96.webp" alt="Mua Vé"></a>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Phim</a>
+                    <div class="dropdown">
+                        <a href="#">Phim Đang Chiếu</a>
+                        <a href="#">Phim Sắp Chiếu</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Góc Điện Ảnh</a>
+                    <div class="dropdown">
+                        <a href="#">Tin Tức</a>
+                        <a href="#">Bình Luận Phim</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Sự Kiện</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Rạp/Giá Vé</a>
+                    <div class="dropdown">
+                        <a href="/Project-UI/client/Page/NguyenDu.html">Retro Nguyễn Du</a>
+                        <a href="#">Giá Vé</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-info">
+                <img src="https://storage.googleapis.com/a1aa/image/6fn68Zz7hJ0rV6hXXU9UWeAP3pc8Z6PzpVhfsd7hP31UdzSnA.jpg" alt="User Avatar" width="40" height="40">
+                <div class="user-details">
+                    <div class="name">Lý An Khang</div>
+                    <div class="stars">0 Stars</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="promo-section">
+            <h2>Khuyến mãi</h2>
+            <div class="promo-code">
+                <label for="promo-input">Mã khuyến mãi</label>
+                <input type="text" id="promo-input" placeholder="Nhập mã khuyến mãi">
+                <button class="apply-btn">Áp Dụng</button>
+            </div>
+            <p class="promo-note">Lưu ý: Có thể áp dụng nhiều vouchers vào 1 lần thanh toán</p>
+            <p class="promo-link">Khuyến mãi của bạn</p>
+            <p class="promo-link">Áp dụng điểm Stars</p>
+            <div class="payment-method-section">
+                <h2>Phương thức thanh toán</h2>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <input type="radio" name="payment" id="payoo" checked>
+                        <label for="payoo">
+                            <img src="../public/img/hsbc-icon_1603203578522.png" alt="Payoo">
+                            HSBC/Payoo - ATM/VISA/MASTER/JCB/QR CODE
+                        </label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" name="payment" id="shopeepay">
+                        <label for="shopeepay">
+                            <img src="../public/img/shopee-pay_1651229746140.png" alt="ShopeePay">
+                            Ví ShopeePay - Nhập mã: SPPCINE10 Giảm 10K cho đơn từ 100K
+                        </label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" name="payment" id="momo">
+                        <label for="momo">
+                            <img src="../public/img/momo-icon_1603203874499.png" alt="Momo">
+                            Ví Điện Tử MoMo
+                        </label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" name="payment" id="zalopay">
+                        <label for="zalopay">
+                            <img src="../public/img/zalopay_1720600308412.png" alt="ZaloPay">
+                            ZaloPay - Giảm 50% tối đa 40K
+                        </label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" name="payment" id="vnpay">
+                        <label for="vnpay">
+                            <img src="../public/img/vnpay-icon.png" alt="VNPay">
+                            VNPay
+                        </label>
+                    </div>
+                </div>
+                <p class="payment-note">(*) Bằng việc click/chạm vào THANH TOÁN bên dưới, bạn đã hiểu rõ các Quy Định Giao Dịch Trực Tuyến của Galaxy Cinema.</p>
+            </div>
+        </div>
+
+    
+        <div class="movie-details">
+            <img src="../public/img/co-dau-hao-mon-1_1723520489120.jpg" alt="Cô Dâu Hào Môn" class="poster">
+            <h3>Cô Dâu Hào Môn</h3>
+            <p>2D Phụ Đề - T18</p>
+            <p>Galaxy Nguyễn Du - RAP 2</p>
+            <p>Suất: 22:15 - Thứ Hai, 21/10/2024</p>
+            <hr>
+            <p>Tổng cộng: 0 đ</p>
+            <a href="../html/food.html"><button class="continue-btn">Tiếp tục</button></a>
+            <button class="back-btn">Quay lại</button>
+        </div>
+    </div>
+</body>
+</html>

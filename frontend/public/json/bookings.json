@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "numberOfSeat": [3, 4],
+    "status": true,
+    "userId": "aaa",
+    "showId": 4,
+    "total": 100000,
+    "seat": ["seat_a1", "seat_b2"],
+    "numOfTicket": 2
+  }
+]

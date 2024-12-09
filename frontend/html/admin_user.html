@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/admin_user.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../public/img/logo.png" alt="Logo" class="logo-img" />
+          <!-- Add your logo here -->
+
+          <h2>Hello, Admin</h2>
+        </div>
+        <hr />
+        <ul class="menu">
+          <li>
+            <a href="/frontend/html/admin_user.html" class="menu-item active">
+              <i class="fa-regular fa-user"></i>Customer
+            </a>
+          </li>
+          <li>
+            <a href="/frontend/html/admin_movie.html" class="menu-item">
+              <i class="fa-solid fa-film"></i>Movie
+            </a>
+          </li>
+          <li>
+            <a href="/frontend/html/admin_showtime.html" class="menu-item">
+              <i class="fa-regular fa-calendar"></i>Showtimes
+            </a>
+          </li>
+        </ul>
+
+        <a href="#" class="logout">Log out</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="movies-header">
+          <!-- New div for Movies header and button -->
+          <h1>Users</h1>
+        </div>
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search for a user by name or email" />
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Họ tên</th>
+              <th>Tên tài khoản</th>
+              <th>Mật khẩu</th>
+              <th>Email</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Phạm Minh Nhật</td>
+              <td>hoangnam123</td>
+              <td>123456789</td>
+              <td>nam21@gmail.com</td>
+              <td>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Phạm Hoàng Nam</td>
+              <td>hoangnam123</td>
+              <td>123456789</td>
+              <td>michelle.rivera@example.com</td>
+              <td>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Get all menu items
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    // Loop through menu items and add click event
+    menuItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        // Remove 'active' class from all menu items
+        menuItems.forEach((el) => el.classList.remove("active"));
+
+        // Add 'active' class to the clicked menu item
+        this.classList.add("active");
+      });
+    });
+
+    // Chức năng của thanh tìm kiếm
+    const searchInput = document.querySelector(".search-bar input");
+
+    searchInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        // Ngăn chặn hành vi mặc định (gửi biểu mẫu hoặc bất kỳ hành động nào khác)
+        event.preventDefault();
+
+        // Gọi hàm tìm kiếm hoặc logic ở đây
+        const searchTerm = searchInput.value.trim();
+
+        // Ví dụ: Ghi log thuật ngữ tìm kiếm (bạn có thể thực hiện logic tìm kiếm riêng)
+        console.log("Đang tìm kiếm:", searchTerm);
+
+        // Thực hiện logic tìm kiếm
+        searchShowtimes(searchTerm);
+      }
+    });
+
+    // Hàm tìm kiếm ví dụ (đây là nơi bạn thực hiện logic tìm kiếm của mình)
+    function searchShowtimes(searchTerm) {
+      const tableRows = document.querySelectorAll("tbody tr");
+      tableRows.forEach((row) => {
+        const cells = row.querySelectorAll("td");
+        const name = cells[1].textContent.toLowerCase(); // Tên người dùng
+
+        // Kiểm tra nếu thuật ngữ tìm kiếm trùng khớp với tên
+        if (name.includes(searchTerm.toLowerCase())) {
+          row.style.display = ""; // Hiển thị hàng
+        } else {
+          row.style.display = "none"; // Ẩn hàng nếu không khớp
+        }
+      });
+    }
+  </script>
+</html>

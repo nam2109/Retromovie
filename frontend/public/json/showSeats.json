@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "row": "c",
+    "col": 5,
+    "isReverse": true,
+    "showId": 4
+  },
+  {
+    "id": 2,
+    "row": "b",
+    "col": 6,
+    "isReverse": true,
+    "showId": 4
+  },
+  {
+    "id": 3,
+    "row": "c",
+    "col": 6,
+    "isReverse": true,
+    "showId": 4
+  },
+  {
+    "id": 4,
+    "row": "b",
+    "col": 7,
+    "isReverse": true,
+    "showId": 4
+  }
+]

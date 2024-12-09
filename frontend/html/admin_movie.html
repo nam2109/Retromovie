@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/admin_movie.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../public/img/logo.png" alt="Logo" class="logo-img" />
+          <h2>Hello, Admin</h2>
+        </div>
+        <hr />
+        <ul class="menu">
+          <li>
+            <a href="/frontend/html/admin_user.html" class="menu-item"
+              ><i class="fa-regular fa-user"></i>Customer</a
+            >
+          </li>
+          <li>
+            <a href="/frontend/html/admin_movie.html" class="menu-item active"
+              ><i class="fa-solid fa-film"></i>Movie</a
+            >
+          </li>
+          <li>
+            <a href="/frontend/html/admin_showtime.html" class="menu-item"
+              ><i class="fa-regular fa-calendar"></i>Showtimes</a
+            >
+          </li>
+        </ul>
+        <a href="#" class="logout">Log out</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="movies-header">
+          <h1>Movies</h1>
+          <button class="add-movie-btn" onclick="openAddMovieModal()">
+            Add Movie
+          </button>
+        </div>
+
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search for a movie by name"
+            id="searchInput"
+          />
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Poster</th>
+              <th>Name</th>
+              <th>Director</th>
+              <th>Description</th>
+              <th>Duration</th>
+              <th>Release Date</th>
+              <th>Genres</th>
+              <th>Actors</th>
+              <th>Country</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="movieTableBody">
+            <!-- Movies will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Add/Edit Movie Modal -->
+    <div id="addMovieModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <form id="addMovieForm" enctype="multipart/form-data">
+          <!-- Movie ID -->
+          <label for="movie-id">Movie ID:</label>
+          <input type="text" id="movie-id" name="id" required />
+
+          <!-- Movie Title -->
+          <label for="movie-name">Movie Name:</label>
+          <input type="text" id="movie-name" name="title" required />
+
+          <!-- Director -->
+          <label for="movie-director">Director:</label>
+          <input type="text" id="movie-director" name="director" required />
+
+          <!-- Description -->
+          <label for="movie-description">Description:</label>
+          <textarea
+            id="movie-description"
+            name="description"
+            required
+          ></textarea>
+
+          <!-- Duration -->
+          <label for="movie-duration">Duration:</label>
+          <input type="text" id="movie-duration" name="duration" required />
+
+          <!-- Release Date -->
+          <label for="movie-releaseDate">Release Date:</label>
+          <input
+            type="date"
+            id="movie-releaseDate"
+            name="releaseDate"
+            required
+          />
+
+          <!-- Poster -->
+          <label for="movie-poster">Poster Image:</label>
+          <input type="file" id="movie-poster" name="poster" accept="image/*" />
+
+          <!-- Poster Trailer -->
+          <label for="movie-posterTrailer">Poster Trailer Image:</label>
+          <input
+            type="file"
+            id="movie-posterTrailer"
+            name="posterTrailer"
+            accept="image/*"
+          />
+
+          <!-- Trailer -->
+          <label for="movie-trailer">Trailer URL:</label>
+          <input type="url" id="movie-trailer" name="trailer" required />
+
+          <!-- Genres -->
+          <label for="movie-genres">Genres:</label>
+          <input type="text" id="movie-genres" name="genres" required />
+
+          <!-- Actors -->
+          <label for="movie-actors">Actors:</label>
+          <input type="text" id="movie-actors" name="actors" required />
+
+          <!-- Country -->
+          <label for="movie-country">Country:</label>
+          <input type="text" id="movie-country" name="country" required />
+
+          <button type="submit" class="submit-btn">Save Changes</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      let currentMovieId = null;
+
+      // Modal functionality
+      function openModal() {
+        document.getElementById("addMovieModal").classList.add("show");
+      }
+
+      function closeModal() {
+        document.getElementById("addMovieModal").classList.remove("show");
+        currentMovieId = null;
+        document.getElementById("addMovieForm").reset();
+      }
+
+      // Open Add Movie Modal
+      function openAddMovieModal() {
+        openModal();
+        document.getElementById("addMovieForm").reset(); // Reset the form fields for new movie
+        currentMovieId = null; // Set the current movie ID to null (new movie)
+      }
+
+      // Fetch movies from API
+      async function fetchMovies() {
+        try {
+          const response = await fetch("/api/movies");
+          const movies = await response.json();
+          const movieTableBody = document.getElementById("movieTableBody");
+          movieTableBody.innerHTML = ""; // Clear existing rows
+
+          movies.forEach((movie) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+        <td>${movie.id}</td>
+        <td><img src="/public/img/${
+          movie.poster
+        }" alt="Poster" width="50" /></td>
+        <td>${movie.title}</td>
+        <td>${movie.director}</td>
+        <td>${movie.description}</td>
+        <td>${movie.duration}</td>
+        <td>${new Date(movie.releaseDate).toLocaleDateString()}</td>
+        <td>${movie.genres.join(", ")}</td>
+        <td>${movie.actors.join(", ")}</td>
+        <td>${movie.country}</td>
+        <td>
+          <button class="edit-btn" onclick="editMovie(${
+            movie.id
+          })">Edit</button>
+          <button class="delete-btn" onclick="deleteMovie(${
+            movie.id
+          })">Delete</button>
+        </td>
+      `;
+            movieTableBody.appendChild(row);
+          });
+        } catch (error) {
+          console.error("Error fetching movies:", error);
+        }
+      }
+
+      // Open Edit Movie Modal
+      async function editMovie(id) {
+        try {
+          const response = await fetch(`/api/movies/${id}`);
+          const movie = await response.json();
+
+          // Fill form with movie data for editing
+          document.getElementById("movie-id").value = movie.id;
+          document.getElementById("movie-name").value = movie.title;
+          document.getElementById("movie-director").value = movie.director;
+          document.getElementById("movie-description").value =
+            movie.description;
+          document.getElementById("movie-duration").value = movie.duration;
+          document.getElementById("movie-releaseDate").value =
+            movie.releaseDate.split("T")[0]; // Format to date input
+          document.getElementById("movie-trailer").value = movie.trailer;
+          document.getElementById("movie-genres").value =
+            movie.genres.join(", "); // Join genres with commas
+          document.getElementById("movie-actors").value =
+            movie.actors.join(", "); // Join actors with commas
+          document.getElementById("movie-country").value = movie.country;
+
+          currentMovieId = movie.id; // Set the current movie ID for editing
+          openModal();
+        } catch (error) {
+          console.error("Error fetching movie for edit:", error);
+        }
+      }
+
+      // Delete movie functionality
+      async function deleteMovie(id) {
+        if (confirm("Are you sure you want to delete this movie?")) {
+          try {
+            await fetch(`/api/movies/${id}`, { method: "DELETE" });
+            fetchMovies(); // Refresh movie list
+          } catch (error) {
+            console.error("Error deleting movie:", error);
+          }
+        }
+      }
+
+      // Handle Add/Edit Movie form submission
+      document
+        .getElementById("addMovieForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(e.target);
+
+          try {
+            let response;
+            if (currentMovieId) {
+              // Update movie
+              response = await fetch(`/api/movies/${currentMovieId}`, {
+                method: "PUT",
+                body: formData,
+              });
+            } else {
+              // Add new movie
+              response = await fetch("/api/movies", {
+                method: "POST",
+                body: formData,
+              });
+            }
+
+            if (!response.ok) {
+              const errorData = await response.json();
+              alert(`Error: ${errorData.message}`);
+              return;
+            }
+
+            closeModal();
+            fetchMovies(); // Refresh movie list
+          } catch (error) {
+            console.error("Error submitting form:", error);
+          }
+        });
+
+      // Search functionality
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", function () {
+          const filter = this.value.toLowerCase();
+          const rows = document.querySelectorAll("#movieTableBody tr");
+
+          rows.forEach((row) => {
+            const movieName = row.cells[2].textContent.toLowerCase();
+            if (movieName.includes(filter)) {
+              row.style.display = "";
+            } else {
+              row.style.display = "none";
+            }
+          });
+        });
+
+      // Initialize movie list
+      fetchMovies();
+    </script>
+  </body>
+</html>

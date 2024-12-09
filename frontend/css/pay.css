@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    height: 100px;
+}
+
+.navbar img {
+    height: 50px;
+}
+.navbar .menu {
+    display: flex;
+    align-items: center;
+}
+.navbar .menu .menu-item {
+    margin: 0 15px;
+    position: relative;
+}
+.navbar .menu .menu-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+.navbar .menu .menu-item .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.navbar .menu .menu-item:hover .dropdown {
+    display: block;
+}
+.navbar .menu .menu-item .dropdown a {
+    display: block;
+    padding: 10px;
+    color: #333;
+}
+.navbar .menu .menu-item .dropdown a:hover {
+    background-color: #f1f1f1;
+}
+.navbar .menu .buy-ticket {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.navbar .menu .buy-ticket i {
+    margin-right: 5px;
+}
+.navbar .search {
+    display: flex;
+    align-items: center;
+}
+.navbar .search i {
+    font-size: 20px;
+    color: #333;
+}
+.navbar .user-info {
+    display: flex;
+    align-items: center;
+}
+.navbar .user-info img {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 10px;
+}
+.navbar .user-info .user-details {
+    display: flex;
+    flex-direction: column;
+}
+.navbar .user-info .user-details .name {
+    font-size: 14px;
+    color: #333;
+}
+.navbar .user-info .user-details .stars {
+    font-size: 12px;
+    color: #999;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+/* .payment-method-section
+{
+    padding: 20px;
+    margin-top: -100px;
+} */
+
+
+.promo-section {
+    width: 60%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.promo-code {
+    display: flex;
+    align-items: center;
+}
+
+.promo-code label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.promo-code input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.apply-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.promo-note {
+    margin-top: 10px;
+    color: #666;
+}
+
+.promo-link {
+    color: #ff5722;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.payment-method-section {
+    margin-top: 30px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.payment-method input {
+    margin-right: 10px;
+}
+
+.payment-method img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.payment-note {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.movie-details {
+    width: 30%; /* Giảm chiều rộng khu vực chi tiết phim */
+    background-color: white;
+    padding: 15px; /* Giảm padding cho gọn gàng */
+    border-radius: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.poster {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.continue-btn, .back-btn {
+    width: 100%;
+    padding: 8px; /* Giảm padding của nút */
+    margin: 8px 0;
+    background-color: #e67e22;
+    border: none;
+    color: white;
+    font-size: 14px; /* Giảm font chữ của nút */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-btn {
+    background-color: #ccc;
+}
+
+.continue-btn:hover, .back-btn:hover {
+    opacity: 0.8;
+}
+
+
+.pay-btn, .back-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.back-btn {
+    background-color: #ccc;
+    margin-top: 10px;
+}

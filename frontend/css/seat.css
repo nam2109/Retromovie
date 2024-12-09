@@ -1,0 +1,336 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  height: 100px;
+}
+
+.navbar img {
+  height: 50px;
+}
+.navbar .menu {
+  display: flex;
+  align-items: center;
+}
+.navbar .menu .menu-item {
+  margin: 0 15px;
+  position: relative;
+}
+.navbar .menu .menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+.navbar .menu .menu-item .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.navbar .menu .menu-item:hover .dropdown {
+  display: block;
+}
+.navbar .menu .menu-item .dropdown a {
+  display: block;
+  padding: 10px;
+  color: #333;
+}
+.navbar .menu .menu-item .dropdown a:hover {
+  background-color: #f58020;
+}
+.navbar .menu .buy-ticket {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.navbar .menu .buy-ticket i {
+  margin-right: 5px;
+}
+.navbar .search {
+  display: flex;
+  align-items: center;
+}
+.navbar .search i {
+  font-size: 20px;
+  color: #333;
+}
+.navbar .user-info {
+  display: flex;
+  align-items: center;
+}
+.navbar .user-info img {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 10px;
+}
+.navbar .user-info .user-details {
+  display: flex;
+  flex-direction: column;
+}
+.navbar .user-info .user-details .name {
+  font-size: 14px;
+  color: #333;
+}
+.navbar .user-info .user-details .stars {
+  font-size: 12px;
+  color: #999;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  transform: scale(0.8);
+  transform-origin: center;
+  width: 100%;
+  margin-top: -80px; /* Điều chỉnh khoảng cách trên */
+}
+
+.seat-selection {
+  width: 60%; /* Giảm chiều rộng của phần chọn ghế */
+  background-color: white;
+  padding: 15px; /* Giảm padding cho gọn gàng */
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; /* Giảm khoảng cách dưới */
+}
+
+.time-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 8px 15px; /* Giảm kích thước nút */
+  font-size: 14px; /* Giảm font chữ */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.manHinh {
+  background-color: #333;
+  width: 400px;
+  height: 10px;
+  border-radius: 20px;
+}
+
+/* ****************************ghe ngoi */
+.seating-chart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 10%;
+  margin-top: 102px;
+}
+.row-labels div {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px; /* Giảm kích thước chữ */
+}
+.seats {
+  display: grid;
+  grid-template-columns: repeat(12, 40px); /* 10 cột cho mỗi ghế */
+  grid-gap: 15px;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seat.selected {
+  background-color: #f58020;
+}
+
+.seat.sold {
+  background-color: #e6e6e6;
+  cursor: not-allowed;
+}
+
+.seat:hover {
+  background-color: #f58020;
+}
+
+/* ghế đã bán ghế đã chọn: **************************************/
+
+.vuong {
+  height: 1.25rem;
+  width: 1.25rem;
+  border: #333;
+  border-radius: 0.25rem;
+}
+.daban {
+  background-color: #d0d0d0;
+}
+.sold {
+  align-items: center;
+}
+.selected {
+  align-items: center;
+}
+.dangchon {
+  background-color: #f58020;
+}
+.flex {
+  display: flex;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+/* ghế đã bán ghế đã chọn: *****************************************/
+
+.single {
+  background-color: #ffcc00; /* Màu nền cho ghế đơn */
+  color: black; /* Màu chữ đen */
+}
+/* ****************************ghe ngoi */
+
+.movie-details {
+  width: 30%; /* Giảm chiều rộng khu vực chi tiết phim */
+  background-color: white;
+  padding: 15px; /* Giảm padding cho gọn gàng */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.poster {
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.continue-btn,
+.back-btn {
+  width: 100%;
+  padding: 8px; /* Giảm padding của nút */
+  margin: 8px 0;
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  font-size: 14px; /* Giảm font chữ của nút */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: #ccc;
+}
+
+.continue-btn:hover,
+.back-btn:hover {
+  opacity: 0.8;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+/* Form xác nhận đặt vé */
+.hidden {
+  display: none;
+}
+
+.confirmation-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9; /* Màu nền nhạt */
+  border-radius: 10px; /* Bo tròn góc */
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng mềm mại */
+  z-index: 1000;
+  width: 400px; /* Độ rộng cố định */
+  font-family: "Arial", sans-serif; /* Font chữ hiện đại */
+}
+
+.confirmation-form h2 {
+  font-size: 24px; /* Kích thước chữ lớn hơn */
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+  text-align: center; /* Căn giữa tiêu đề */
+  color: #333; /* Màu chữ đậm */
+  font-weight: bold;
+}
+
+.confirmation-form p {
+  font-size: 16px;
+  color: #555; /* Màu chữ xám đậm */
+  text-align: center;
+  margin-bottom: 20px; /* Khoảng cách dưới đoạn văn */
+}
+
+.confirmation-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirmation-form #confirmButton {
+  background-color: #28a745; /* Màu xanh lá */
+  color: white;
+  margin-bottom: 10px; /* Khoảng cách dưới nút */
+}
+
+.confirmation-form #confirmButton:hover {
+  background-color: #218838; /* Màu đậm hơn khi hover */
+}
+
+.confirmation-form #cancelButton {
+  background-color: #dc3545; /* Màu đỏ */
+  color: white;
+}
+
+.confirmation-form #cancelButton:hover {
+  background-color: #c82333; /* Màu đậm hơn khi hover */
+}

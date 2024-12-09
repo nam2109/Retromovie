@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #152259;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px 20px;
+}
+
+.logo-img {
+  max-width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.logo h2 {
+  font-size: 24px;
+  color: white;
+  padding-top: 20px;
+}
+
+.menu {
+  padding: 30px;
+  list-style: none;
+}
+
+.menu li {
+  margin: 5px 0;
+}
+
+.menu li a i {
+  margin-right: 10px;
+  color: white;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  padding-left: 23px;
+  transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+  background-color: #4a90e2;
+}
+
+.menu li a.active {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.logout {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 280px;
+  display: flex;
+  justify-content: center;
+}
+/* Log out button */
+.logout {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 280px;
+  display: flex;
+  justify-content: center;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Hover effect to turn red */
+.logout:hover {
+  color: red; /* Background color turns red on hover */
+  border-radius: 5px; /* Optional: round the edges of the background */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: white;
+}
+
+.showtimes-header {
+  display: flex;
+  justify-content: space-between; /* Space between text and button */
+  align-items: center; /* Center vertically */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.add-showtime-btn {
+  padding: 10px 20px; /* Add padding to the button */
+  background-color: #007bff; /* Example background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.add-showtime-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: #f2f2f2;
+  padding-left: 15px;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 5px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+.edit-btn,
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: red;
+}
+
+.edit-btn {
+  color: blue;
+}
+/************************************FORM************************************************************
+/* Modal styling */
+.modal {
+  display: flex; /* Ẩn modal mặc định */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  visibility: hidden; /* Ban đầu ẩn */
+  opacity: 0; /* Hoàn toàn trong suốt */
+  transition: visibility 0s 0.3s, opacity 0.3s linear; /* Hoãn thay đổi visibility cho đến khi hoàn thành fade out */
+}
+
+.modal.show {
+  visibility: visible; /* Hiển thị */
+  opacity: 1; /* Hoàn toàn mờ đục */
+  transition: opacity 0.3s linear; /* Fade in */
+}
+
+/* Nội dung modal */
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 50%; /* Điều chỉnh chiều rộng theo nhu cầu */
+  max-width: 600px; /* Chiều rộng tối đa cho modal */
+  max-height: 120vh; /* Đặt chiều cao tối đa là 80% chiều cao viewport */
+  overflow-y: auto; /* Bật cuộn dọc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+  animation: modalFadeIn 0.3s ease; /* Hiệu ứng mở modal */
+}
+
+/* Hiệu ứng mở modal */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Nút đóng modal (X) */
+.close-btn {
+  color: #888;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Tiêu đề modal */
+.modal-content h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Style các nhãn (label) trong form */
+.modal-content label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+/* Style for select elements within the modal */
+.modal-content select {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for spacing */
+  margin-bottom: 15px; /* Space below the element */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+  font-size: 14px; /* Font size */
+  transition: border-color 0.3s ease; /* Transition effect for border color on focus */
+}
+
+/* Change border color when select is focused */
+.modal-content select:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Style các trường nhập liệu (input, textarea) */
+.modal-content input[type="text"],
+.modal-content input[type="date"],
+.modal-content input[type="file"],
+.modal-content input[type="time"],
+
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content input[type="date"]:focus,
+.modal-content input[type="file"]:focus,
+.modal-content input[type="time"]:focus,
+
+.modal-content textarea:focus {
+  border-color: #007bff; /* Đổi màu khi focus */
+  outline: none;
+}
+
+/* Style riêng cho textarea */
+.modal-content textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* Nút submit form */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Thêm khoảng cách giữa các thành phần form */
+.modal-content input,
+.modal-content textarea,
+.modal-content label {
+  margin-bottom: 15px;
+}
+
+/* Responsive cho modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}
+/************************************FORM************************************************************
