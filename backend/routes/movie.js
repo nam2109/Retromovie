@@ -122,6 +122,7 @@ router.put(
         country,
       } = req.body;
 
+      // Lưu thông tin cập nhật vào đối tượng
       const updatedData = {
         id,
         title,
@@ -130,22 +131,24 @@ router.put(
         duration,
         releaseDate,
         trailer,
-        genres: genres.split(","),
-        actors: actors.split(","),
+        genres: genres.split(","), // Tách genres thành mảng
+        actors: actors.split(","), // Tách actors thành mảng
         country,
       };
 
-      if (req.files.poster) {
+      // Kiểm tra và thêm đường dẫn poster và posterTrailer nếu có
+      if (req.files.poster && req.files.poster[0]) {
         updatedData.poster = `../public/img/${req.files.poster[0].filename}`;
       }
-      if (req.files.posterTrailer) {
+      if (req.files.posterTrailer && req.files.posterTrailer[0]) {
         updatedData.posterTrailer = `../public/img/${req.files.posterTrailer[0].filename}`;
       }
 
+      // Tìm và cập nhật phim
       const updatedMovie = await Movie.findOneAndUpdate(
         { id: req.params.id },
         updatedData,
-        { new: true }
+        { new: true } // Tùy chọn này trả về bản ghi đã cập nhật
       );
 
       if (!updatedMovie) {

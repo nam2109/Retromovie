@@ -185,10 +185,10 @@
             const row = document.createElement("tr");
             row.innerHTML = `
         <td>${movie.id}</td>
-        <td><img src="/public/img/${
-          movie.poster
-        }" alt="Poster" width="50" /></td>
-        <td>${movie.title}</td>
+<img src="${movie.poster}" alt="${
+              movie.title
+            }" class="movie-poster" width="80" />        
+            <td>${movie.title}</td>
         <td>${movie.director}</td>
         <td>${movie.description}</td>
         <td>${movie.duration}</td>
@@ -282,6 +282,10 @@
               alert(`Error: ${errorData.message}`);
               return;
             }
+            const message = currentMovieId
+              ? "Movie updated successfully!"
+              : "Movie added successfully!";
+            alert(message);
 
             closeModal();
             fetchMovies(); // Refresh movie list
