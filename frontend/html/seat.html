@@ -187,7 +187,7 @@
         // Fetch movie and specific show data directly
         const [movieResponse, showResponse] = await Promise.all([
           fetch(`http://127.0.0.1:3001/api/movies/nam/${movieId}`),
-          fetch(`http://127.0.0.1:3001/api/shows/showId/${showId}`),
+          fetch(`http://127.0.0.1:3001/api/shows/nam/showId/${showId}`),
         ]);
 
         if (movieResponse.ok && showResponse.ok) {
@@ -290,7 +290,7 @@
       }
 
       // Lấy thông tin show để cập nhật giá vé
-      fetch(`/api/shows/showId/${showId}`)
+      fetch(`/api/shows/nam/showId/${showId}`)
         .then((response) => response.json())
         .then((show) => {
           ticketPrice = show.price;

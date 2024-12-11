@@ -182,6 +182,130 @@ table th {
 .edit-btn {
   color: blue;
 }
+
+/*edit form******************************************/
+#editModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content-1 {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 30%;
+  border-radius: 8px;
+}
+.modal-content-1 {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 50%; /* Điều chỉnh chiều rộng theo nhu cầu */
+  max-width: 600px; /* Chiều rộng tối đa cho modal */
+  max-height: 120vh; /* Đặt chiều cao tối đa là 80% chiều cao viewport */
+  overflow-y: auto; /* Bật cuộn dọc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+  animation: modalFadeIn 0.3s ease; /* Hiệu ứng mở modal */
+}
+
+/* Hiệu ứng mở modal */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Nút đóng modal (X) */
+.close-btn-1 {
+  color: #888;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.close-btn-1:hover {
+  color: #ffffff33;
+}
+
+/* Tiêu đề modal */
+.modal-content-1 h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Style các nhãn (label) trong form */
+.modal-content-1 label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+/* Style for select elements within the modal */
+.modal-content-1 select {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for spacing */
+  margin-bottom: 15px; /* Space below the element */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+  font-size: 14px; /* Font size */
+  transition: border-color 0.3s ease; /* Transition effect for border color on focus */
+}
+
+/* Change border color when select is focused */
+.modal-content-1 select:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Style các trường nhập liệu (input, textarea) */
+.modal-content-1 input[type="number"],
+.modal-content-1 input[type="date"],
+.modal-content-1 input[type="file"],
+.modal-content-1 input[type="time"],
+.modal-content-1 input[type="text"],
+.modal-content-1 textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content-1 input[type="text"]:focus,
+.modal-content-1 input[type="date"]:focus,
+.modal-content-1 input[type="file"]:focus,
+.modal-content-1 input[type="time"]:focus,
+.modal-content-1 textarea:focus {
+  border-color: #007bff; /* Đổi màu khi focus */
+  outline: none;
+}
+
+/* Style riêng cho textarea */
+.modal-content-1 textarea {
+  height: 80px;
+  resize: none;
+}
+
 /************************************FORM************************************************************
 /* Modal styling */
 .modal {
@@ -208,7 +332,7 @@ table th {
 
 /* Nội dung modal */
 
-.modal-content {
+.modal-content-2 {
   background-color: #fff;
   border-radius: 10px;
   padding: 30px;
@@ -233,7 +357,7 @@ table th {
 }
 
 /* Nút đóng modal (X) */
-.close-btn {
+.close-btn-2 {
   color: #888;
   font-size: 20px;
   font-weight: bold;
@@ -243,12 +367,12 @@ table th {
   right: 20px;
 }
 
-.close-btn:hover {
-  color: #333;
+.close-btn-2:hover {
+  color: #ffffff33;
 }
 
 /* Tiêu đề modal */
-.modal-content h2 {
+.modal-content-2 h2 {
   text-align: center;
   font-size: 24px;
   color: #333;
@@ -257,7 +381,7 @@ table th {
 }
 
 /* Style các nhãn (label) trong form */
-.modal-content label {
+.modal-content-2 label {
   display: block;
   margin-bottom: 8px;
   font-size: 14px;
@@ -265,7 +389,7 @@ table th {
   color: #333;
 }
 /* Style for select elements within the modal */
-.modal-content select {
+.modal-content-2 select {
   width: 100%; /* Full width */
   padding: 10px; /* Padding for spacing */
   margin-bottom: 15px; /* Space below the element */
@@ -277,18 +401,18 @@ table th {
 }
 
 /* Change border color when select is focused */
-.modal-content select:focus {
+.modal-content-2 select:focus {
   border-color: #007bff; /* Change border color on focus */
   outline: none; /* Remove default outline */
 }
 
 /* Style các trường nhập liệu (input, textarea) */
-.modal-content input[type="text"],
-.modal-content input[type="date"],
-.modal-content input[type="file"],
-.modal-content input[type="time"],
-
-.modal-content textarea {
+.modal-content-2 input[type="number"],
+.modal-content-2 input[type="date"],
+.modal-content-2 input[type="file"],
+.modal-content-2 input[type="time"],
+.modal-content-2 input[type="text"],
+.modal-content-2 textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -299,18 +423,17 @@ table th {
   transition: border-color 0.3s ease;
 }
 
-.modal-content input[type="text"]:focus,
-.modal-content input[type="date"]:focus,
-.modal-content input[type="file"]:focus,
-.modal-content input[type="time"]:focus,
-
-.modal-content textarea:focus {
+.modal-content-2 input[type="text"]:focus,
+.modal-content-2 input[type="date"]:focus,
+.modal-content-2 input[type="file"]:focus,
+.modal-content-2 input[type="time"]:focus,
+.modal-content-2 textarea:focus {
   border-color: #007bff; /* Đổi màu khi focus */
   outline: none;
 }
 
 /* Style riêng cho textarea */
-.modal-content textarea {
+.modal-content-2 textarea {
   height: 80px;
   resize: none;
 }
@@ -334,9 +457,9 @@ table th {
 }
 
 /* Thêm khoảng cách giữa các thành phần form */
-.modal-content input,
-.modal-content textarea,
-.modal-content label {
+.modal-content-2 input,
+.modal-content-2 textarea,
+.modal-content-2 label {
   margin-bottom: 15px;
 }
 
@@ -351,4 +474,3 @@ table th {
     font-size: 14px;
   }
 }
-/************************************FORM************************************************************
