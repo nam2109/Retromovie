@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const Seat = require("../models/seat"); // Import mô hình Seat
+const Seat = require("../models/seat");
 
 // API để lấy dữ liệu ghế
 router.get("/", async (req, res) => {
   try {
-    const seats = await Seat.find(); // Lấy tất cả dữ liệu ghế
+    const seats = await Seat.find();
     res.json(seats);
   } catch (error) {
     console.error(error);

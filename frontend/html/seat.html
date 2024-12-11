@@ -107,7 +107,7 @@
     </div>
   </body>
   <script>
-    const selectedSeats = new Set(); // Lưu danh sách ghế đang chọn
+    const selectedSeats = new Set();
     document.getElementById("continueButton").addEventListener("click", (e) => {
       e.preventDefault();
       const selectedSeatsArray = Array.from(selectedSeats);
@@ -115,8 +115,6 @@
         alert("Vui lòng chọn ít nhất một ghế!");
         return;
       }
-
-      // Hiển thị form xác nhận và thông tin ghế đã chọn
       document.getElementById("confirmationForm").classList.remove("hidden");
       document.getElementById(
         "selectedSeatsSummary"
@@ -146,13 +144,13 @@
               },
               body: JSON.stringify({
                 seats: Array.from(selectedSeats).map((seat) => {
-                  const row = seat[0]; // Lấy hàng từ ký tự đầu tiên
-                  const col = parseInt(seat.slice(1), 10); // Lấy cột từ các ký tự còn lại
+                  const row = seat[0];
+                  const col = parseInt(seat.slice(1), 10);
                   return {
-                    seatId: `${row}${col}`, // Ví dụ: "A5"
+                    seatId: `${row}${col}`,
                     row,
                     col,
-                    showId: parseInt(showId), // Cần đảm bảo `showId` là số nguyên
+                    showId: parseInt(showId),
                   };
                 }),
               }),
@@ -161,7 +159,7 @@
 
           if (response.ok) {
             alert("Đặt vé thành công!");
-            window.location.reload(); // Tải lại trang sau khi đặt ghế thành công
+            window.location.reload();
           } else {
             const errorData = await response.json();
             alert(`Đặt vé thất bại: ${errorData.message}`);
@@ -184,7 +182,6 @@
       }
 
       try {
-        // Fetch movie and specific show data directly
         const [movieResponse, showResponse] = await Promise.all([
           fetch(`http://127.0.0.1:3001/api/movies/nam/${movieId}`),
           fetch(`http://127.0.0.1:3001/api/shows/nam/showId/${showId}`),
@@ -194,7 +191,6 @@
           const movie = await movieResponse.json();
           const show = await showResponse.json();
 
-          // Update movie details
           posterImg.src = movie.poster;
           document.querySelector(".movie-details h3").textContent = movie.title;
 
@@ -225,46 +221,38 @@
     document.addEventListener("DOMContentLoaded", async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const showId = urlParams.get("showId");
-      let ticketPrice = 0; // Giá vé (sẽ được cập nhật từ API show)
+      let ticketPrice = 0;
 
       try {
-        // Gọi API lấy danh sách ghế từ MongoDB
-        const responseSeats = await fetch(`/api/seats`); // API lấy danh sách tất cả ghế
+        const responseSeats = await fetch(`/api/seats`);
         if (!responseSeats.ok) throw new Error("Không thể lấy dữ liệu ghế");
 
         const seats = await responseSeats.json();
 
-        // Gọi API lấy danh sách ghế đã đặt (showSeats) theo showId
         const responseShowSeats = await fetch(`/api/showseats/${showId}`);
         if (!responseShowSeats.ok)
           throw new Error("Không thể lấy dữ liệu ghế đã đặt");
 
         const showSeats = await responseShowSeats.json();
 
-        // Tạo một Set chứa các ghế đã đặt để dễ dàng kiểm tra
         const soldSeats = new Set(
           showSeats.map((seat) => `${seat.row}${seat.col}`)
         );
 
-        // Lấy phần tử nơi ghế sẽ được hiển thị
         const seatingChart = document.querySelector(".seats");
-        seatingChart.innerHTML = ""; // Xóa nội dung ghế cũ
 
-        // Duyệt qua tất cả ghế và tạo các button ghế trên giao diện
         seats.forEach((seat) => {
           const seatButton = document.createElement("button");
           seatButton.classList.add("seat");
           seatButton.innerText = `${seat.row}${seat.col}`;
-          seatButton.dataset.row = seat.row; // Lưu trữ row để tiện xử lý
-          seatButton.dataset.col = seat.col; // Lưu trữ col để tiện xử lý
+          seatButton.dataset.row = seat.row;
+          seatButton.dataset.col = seat.col;
 
-          // Kiểm tra xem ghế đã được đặt hay chưa
           if (soldSeats.has(`${seat.row}${seat.col}`)) {
-            seatButton.classList.add("sold"); // Đánh dấu ghế đã đặt
-            seatButton.disabled = true; // Không cho phép chọn ghế đã đặt
+            seatButton.classList.add("sold");
+            seatButton.disabled = true;
           }
 
-          // Xử lý sự kiện khi chọn ghế
           seatButton.addEventListener("click", () => {
             if (seatButton.classList.contains("selected")) {
               seatButton.classList.remove("selected");
@@ -278,7 +266,7 @@
 
           seatingChart.appendChild(seatButton);
         });
-        // Hàm cập nhật tổng tiền
+
         function updateTotal() {
           const total = selectedSeats.size * ticketPrice;
           document.querySelector(
@@ -289,21 +277,12 @@
         console.error("Lỗi khi lấy dữ liệu ghế:", error);
       }
 
-      // Lấy thông tin show để cập nhật giá vé
       fetch(`/api/shows/nam/showId/${showId}`)
         .then((response) => response.json())
         .then((show) => {
           ticketPrice = show.price;
         })
         .catch((error) => console.error("Error fetching show:", error));
-
-      // Hàm cập nhật tổng tiền
-      function updateTotal() {
-        const total = selectedSeats.size * ticketPrice;
-        document.querySelector(
-          ".total"
-        ).textContent = `Tổng cộng: ${total.toLocaleString} đ`;
-      }
     });
   </script>
 </html>

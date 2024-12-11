@@ -257,14 +257,14 @@
           const movies = await response.json();
           const moviesGrid = document.getElementById("movies-grid");
 
-          // Tạo và thêm các thẻ cho từng phim
           movies.forEach((movie) => {
             const movieCard = document.createElement("div");
             movieCard.classList.add("movie-card");
 
             movieCard.innerHTML = `
               <a href="/movie/details.html?id=${movie.id}">
-                <img src="${movie.poster}" alt="${movie.title}" class="movie-poster" />
+                <img src="${movie.poster}" alt="${movie.title}" 
+                class="movie-poster" />
                 <h3>${movie.title}</h3>
               </a>
             `;

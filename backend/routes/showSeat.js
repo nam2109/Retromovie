@@ -1,15 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-const ShowSeat = require("../models/showSeat"); // Đường dẫn tới file model ShowSeat
+const ShowSeat = require("../models/showSeat");
 
-// API lấy dữ liệu ghế đã đặt (showSeats) theo showId
 router.get("/:showId", async (req, res) => {
   const { showId } = req.params;
   try {
-    // Tìm tất cả các ghế đã đặt cho showId
     const showSeats = await ShowSeat.find({ showId: showId });
-    res.json(showSeats); // Trả về danh sách ghế đã đặt
+    res.json(showSeats);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Lỗi khi lấy dữ liệu ghế đã đặt" });

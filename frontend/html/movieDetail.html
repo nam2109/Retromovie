@@ -199,7 +199,8 @@
       document.addEventListener("DOMContentLoaded", async () => {
         const urlParams = new URLSearchParams(window.location.search);
         const movieId = urlParams.get("id");
-        const posterImg = document.getElementById("moviePoster"); // Đảm bảo ID là "moviePoster"
+        const posterImg = document.getElementById("moviePoster");
+        const trailerImg = document.getElementById("trailerPoster");
 
         try {
           const response = await fetch(
@@ -207,14 +208,13 @@
           );
           if (response.ok) {
             const movie = await response.json();
-
-            // Cập nhật tiêu đề của trang
             document.querySelector("title").innerText = movie.title;
             document.querySelector(".details h1").innerHTML = `${
               movie.title
-            } <span style="background-color: #f39c12; color: #fff; margin: 0 20px; padding: 2px 5px; border-radius: 3px;">${
-              movie.rating || "T18"
-            }</span>`;
+            } <span style="background-color: #f39c12; color: #fff; margin: 
+             0 20px; padding: 2px 5px; border-radius: 3px;">${
+               movie.rating || "T18"
+             }</span>`;
             document.querySelector(
               ".details .info span i"
             ).nextSibling.textContent = `${movie.duration} phút`;
@@ -224,10 +224,8 @@
               movie.releaseDate
             ).toLocaleDateString();
 
-            // Cập nhật thông tin Quốc Gia
             document.querySelector(".country").innerText = movie.country;
 
-            // Cập nhật thông tin Thể Loại
             const genreContainer = document.querySelector(".genres");
             movie.genres.forEach((genre) => {
               const span = document.createElement("span");
@@ -236,10 +234,8 @@
               genreContainer.appendChild(span);
             });
 
-            // Cập nhật thông tin Đạo diễn
             document.querySelector(".director").innerText = movie.director;
 
-            // Cập nhật thông tin Diễn viên
             const actorContainer = document.querySelector(".actors");
             movie.actors.forEach((actor) => {
               const p = document.createElement("p");
@@ -247,16 +243,10 @@
               actorContainer.appendChild(p);
             });
 
-            // Cập nhật mô tả phim
             document.querySelector(".description p").innerText =
               movie.description;
-
-            // Cập nhật ảnh poster
-            posterImg.src = movie.poster; // Đảm bảo movie.poster có chứa đường dẫn đúng
-
-            // Cập nhật ảnh trailer
-            const trailerImg = document.getElementById("trailerPoster");
-            trailerImg.src = movie.posterTrailer; // Giả định `movie.posterTrailer` chứa đường dẫn ảnh đúng
+            posterImg.src = movie.poster;
+            trailerImg.src = movie.posterTrailer;
           } else {
             console.error("Movie not found");
           }
@@ -266,7 +256,6 @@
       });
 
       document.addEventListener("DOMContentLoaded", async () => {
-        // Lấy movieId từ URL
         const urlParams = new URLSearchParams(window.location.search);
         const movieId = urlParams.get("id");
 
@@ -276,14 +265,12 @@
         }
 
         try {
-          // Fetch lịch chiếu theo movieId
           const response = await fetch(
             `http://127.0.0.1:3001/api/shows/nam/${movieId}`
           );
           if (response.ok) {
             const shows = await response.json();
 
-            // Phân loại lịch chiếu theo rạp
             const groupedShows = shows.reduce((acc, show) => {
               const cinemaHallId = show.cinemaHallId.startsWith("hall_gv")
                 ? "gv"
@@ -293,42 +280,36 @@
               return acc;
             }, {});
 
-            // Hiển thị lịch chiếu của Retro Gò Vấp
             const goVapContainer = document.querySelector("#gv .showtimes");
             if (groupedShows.gv && groupedShows.gv.length > 0) {
               groupedShows.gv.forEach((show) => {
                 const button = document.createElement("button");
                 button.innerText = show.startTime;
-
-                // Thêm sự kiện click để chuyển hướng
                 button.addEventListener("click", () => {
                   const url = `http://127.0.0.1:3001/seat.html?movieId=${movieId}&showId=${show.id}`;
-                  window.location.href = url; // Chuyển hướng đến trang đặt ghế
+                  window.location.href = url;
                 });
-
                 goVapContainer.appendChild(button);
               });
             } else {
-              document.querySelector("#gv").style.display = "none"; // Ẩn rạp nếu không có lịch chiếu
+              document.querySelector("#gv").style.display = "none";
             }
 
-            // Hiển thị lịch chiếu của Retro Bình Thạnh
             const binhThanhContainer = document.querySelector("#bt .showtimes");
             if (groupedShows.bt && groupedShows.bt.length > 0) {
               groupedShows.bt.forEach((show) => {
                 const button = document.createElement("button");
                 button.innerText = show.startTime;
 
-                // Thêm sự kiện click để chuyển hướng
                 button.addEventListener("click", () => {
                   const url = `http://127.0.0.1:3001/seat.html?movieId=${movieId}&showId=${show.id}`;
-                  window.location.href = url; // Chuyển hướng đến trang đặt ghế
+                  window.location.href = url;
                 });
 
                 binhThanhContainer.appendChild(button);
               });
             } else {
-              document.querySelector("#bt").style.display = "none"; // Ẩn rạp nếu không có lịch chiếu
+              document.querySelector("#bt").style.display = "none";
             }
           } else {
             console.error("Failed to fetch show data");
